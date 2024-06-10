@@ -3,14 +3,15 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 20px 50px;
+  padding-bottom: 10px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   color: white;
   background-color: rgb(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   background-color: transparent;
   z-index: 99;
 }
@@ -33,5 +34,5 @@ header {
 
 .nav-item:hover,
 .active {
-  color: green;
+  color: black;
 }

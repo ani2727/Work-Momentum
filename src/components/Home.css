@@ -1,5 +1,6 @@
-.bg-cont {
+.total-bg {
   background: linear-gradient(180deg, #ffa726 0%, #42a5f5 30%);
+  min-height: 100dvh;
 }
 
 /* .bg-cont {
