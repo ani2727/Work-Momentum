@@ -36,7 +36,7 @@ const Home = () => {
                     </div>
                 </section>
                 <div className="home-image">
-                  <img src="girlimage.png" alt=""/>
+                  <img src="https://rb.gy/4u9zpr" alt=""/>
                 </div>
               </div>
             <div className="home-testimonials">
