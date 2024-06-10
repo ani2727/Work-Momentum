@@ -1,6 +1,6 @@
 .total-bg {
   background: linear-gradient(180deg, #ffa726 0%, #42a5f5 30%);
-  min-height: 100dvh;
+  backdrop-filter: blur(100px);
 }
 
 /* .bg-cont {
@@ -38,7 +38,7 @@ h1 {
 }
 .static-txt {
   color: #fff;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 400;
 }
 .wrapper .dynamic-txts {
@@ -90,18 +90,21 @@ h1 {
 .buttons-container {
   margin-top: 30px;
   display: flex;
-  gap: 30px;
+  align-items: center;
+  gap: 10px;
 }
 
 .demo-btn {
   background-color: white;
   color: black;
+  height: 60px;
   font-weight: 700;
-  font-size: 32px;
-  padding: 20px 40px;
+  font-size: 16px;
+  padding: 2px 20px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px white;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .demo-btn:hover {
@@ -115,16 +118,34 @@ h1 {
   background-color: transparent;
   color: white;
   font-weight: 700;
-  font-size: 32px;
+  font-size: 20px;
   margin: 10px 40px;
   padding: 10px 0px;
   border: 0;
   border-bottom: 3px solid white;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .explore-btn:hover {
   color: black;
   text-shadow: 1px 1px 10px white, -1px -1px 10px white;
   border-bottom: 3px solid black;
+}
+
+.home-testimonials{
+  margin-top: 100px;
+  text-align: center;
+  color: black;
+}
+
+.home-header {
+  display: flex;
+  align-items: center; 
+  justify-content: space-evenly; 
+}
+
+.home-image img{
+  height: 500px;
+  margin-top: 30px;
 }

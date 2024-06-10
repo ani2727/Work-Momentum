@@ -1,0 +1,51 @@
+/* Cards.css */
+.home-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    backdrop-filter: blur(55px);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover{
+    background: white;
+    cursor: pointer;
+    transform: scale(1.07);
+    box-shadow: 1px -3px 3px 3px rgb(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100px; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 50%; /* to make the image circular */
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+/* Cards.css */
+.card {
+    text-align: center;
+}
+
+.card p {
+    margin: 5px;
+}
+
+.stars {
+    font-size: 20px;
+    color:gold;
+}
