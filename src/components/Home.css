@@ -1,0 +1,129 @@
+.bg-cont {
+  background: linear-gradient(180deg, #ffa726 0%, #42a5f5 30%);
+}
+
+/* .bg-cont {
+  background: rgb(66, 165, 245);
+  background: radial-gradient(
+    circle,
+    rgba(66, 165, 245, 1) 70%,
+    rgba(255, 167, 38, 1) 80%
+  );
+} */
+
+.hero-section {
+  width: 100%;
+  color: white;
+  padding: 100px;
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+h1 {
+  font-size: 4rem;
+}
+.hewr {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+.static-txt {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-txts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li {
+  list-style: none;
+  color: black;
+  font-size: 60px;
+  font-weight: 500;
+  font-style: italic;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 120%;
+  width: 100%;
+  background: #42a5f5;
+
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.buttons-container {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+}
+
+.demo-btn {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  font-size: 32px;
+  padding: 20px 40px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px white;
+  cursor: pointer;
+}
+
+.demo-btn:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0px 0px 0px white;
+  border: 3px solid white;
+}
+
+.explore-btn {
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+  margin: 10px 40px;
+  padding: 10px 0px;
+  border: 0;
+  border-bottom: 3px solid white;
+  cursor: pointer;
+}
+
+.explore-btn:hover {
+  color: black;
+  text-shadow: 1px 1px 10px white, -1px -1px 10px white;
+  border-bottom: 3px solid black;
+}
