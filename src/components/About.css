@@ -1,0 +1,52 @@
+.about-us-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.mission,
+.vision,
+.services,
+.team {
+  margin-bottom: 30px;
+}
+
+.services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.services ul li {
+  background: rgb(255, 255, 255, 0.1);
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.team-member {
+  flex: 1 1 calc(50% - 20px);
+  text-align: center;
+}
+
+.team-member img {
+  max-width: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
