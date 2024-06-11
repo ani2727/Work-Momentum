@@ -1,8 +1,8 @@
 .main {
-  padding: 40px 20px;
+  padding: 20px 20px;
   text-align: center;
   color: #fff;
-  margin-top: 2em;
+  /* margin-top: 1rem; */
 }
 .main p {
   padding-bottom: 20px;
@@ -10,6 +10,7 @@
 
 .main h1 {
   font-size: 3.75rem;
+  margin-bottom: 3rem;
 }
 
 .contact-container {

@@ -4,7 +4,6 @@ const ContactUs = () => {
   return (
     <main className="main">
       <h1>Contact Us</h1>
-
       <div class="contact-container">
         <div class="contact-info">
           <h2>Contact Information</h2>
