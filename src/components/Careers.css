@@ -88,8 +88,7 @@
 
 
 
-body {
-    margin-top: 2.5rem;
+.body {
     margin-bottom: 2.5rem;
     overflow-x: hidden;
     font-size: 1rem; /* Set a base font size */
