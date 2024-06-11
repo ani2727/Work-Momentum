@@ -18,8 +18,7 @@ const About = () => {
           <p className="mission-desc">
             To be the trusted partner for businesses, known for our commitment
             to quality and innovation. We tailor solutions to meet unique client
-            needs, driving success and growth. Through our expertise, we empower
-            and transform businesses globally.
+            needs, driving success and growth.
           </p>
         </div>
       </section>

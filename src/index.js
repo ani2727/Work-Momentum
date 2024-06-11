@@ -10,7 +10,7 @@ import Error from "./components/Error";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ContactUs from "./components/ContactUs";
 import Careers from "./components/Careers";
-import Temp from "./components/Temp";
+// import Temp from "./components/Temp";
 
 const AppLayout = () => {
   return (
@@ -53,11 +53,6 @@ const appRouter = createBrowserRouter([
       {
         path: "/careers",
         element: <Careers />,
-        errorElement: <Error />,
-      },
-      {
-        path: "/temp",
-        element: <Temp />,
         errorElement: <Error />,
       },
     ],
