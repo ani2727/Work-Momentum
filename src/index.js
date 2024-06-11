@@ -8,6 +8,8 @@ import Services from './components/Services';
 import About from './components/About';
 import Error from './components/Error';
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import ContactUs from './components/ContactUs';
+import Careers from "./components/Careers"
 
 const AppLayout = () =>{
   return ( 
@@ -40,6 +42,16 @@ const appRouter = createBrowserRouter([
           {
             path:"/services",
             element:<Services/>,
+            errorElement:<Error/>
+          },
+          {
+            path:"/contact",
+            element:<ContactUs/>,
+            errorElement:<Error/>
+          },
+          {
+            path:"/careers",
+            element:<Careers/>,
             errorElement:<Error/>
           }
       ]

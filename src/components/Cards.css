@@ -22,6 +22,7 @@
     background: white;
     cursor: pointer;
     transform: scale(1.07);
+    color: black;
     box-shadow: 1px -3px 3px 3px rgb(0, 0, 0, 0.2);
 }
 
