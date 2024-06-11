@@ -9,15 +9,15 @@ header {
   align-items: center;
   padding: 1.25rem 3.125rem; /* 20px 50px */
   padding-bottom: 0.625rem; /* 10px */
-  /* position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
-  right: 0; */
+  right: 0;
   color: white;
-  background-color: rgba(255, 255, 255, 0.4);
+  /* background-color: rgba(255, 255, 255, 0.4); */
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
-  background-color: transparent;
+  background-color: initial;
   z-index: 99;
 }
 
@@ -42,7 +42,7 @@ header {
   overflow: hidden;
 }
 
-.nav-item::before {
+/* .nav-item::before {
   content: "";
   position: absolute;
   top: 0;
@@ -54,7 +54,7 @@ header {
   transition: transform 0.7s ease;
   transform: scaleX(0);
   transform-origin: left;
-}
+} */
 
 .nav-item:hover::before,
 .nav-item.active::before {
