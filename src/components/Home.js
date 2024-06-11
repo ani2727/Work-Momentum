@@ -6,9 +6,9 @@ const Home = () => {
   const el = useRef(null);
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Web Apps", "Mobile Apps"],
-      typeSpeed: 100,
-      backSpeed: 80,
+      strings: ["Web Apps", "Mobile Apps", "Hosting", "Frameworks"],
+      typeSpeed: 50,
+      backSpeed: 50,
       loop: true,
       loopCount: Infinity,
       showCursor: false,
@@ -32,7 +32,10 @@ const Home = () => {
           </h1>
           <div className="wrapper">
             <h2 className="static-txt">
-              Expert consultation for <span className="dynamic-txts" ref={el} />{" "}
+              Expert consultation for
+              <i>
+                <span className="dynamic-txts" ref={el}></span>
+              </i>
             </h2>
           </div>
           <div className="buttons-container">
