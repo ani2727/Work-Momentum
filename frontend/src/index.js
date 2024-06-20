@@ -7,6 +7,7 @@ import Services from "./components/Services/Services";
 import Home from './components/Home/Home'
 import About from "./components/About/About"
 import Contact from "./components/Contact/Contact";
+import Products from "./components/Products/Products";
 
 
 const appRouter = createBrowserRouter([
@@ -30,6 +31,10 @@ const appRouter = createBrowserRouter([
         path:"/contact",
         element:<Contact/>
       },
+      {
+        path:"/products",
+        element:<Products/>
+      }
     ],
   },
 ]);
