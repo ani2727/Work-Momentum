@@ -1,14 +1,22 @@
+.navbar{
+  position: fixed;
+  width: 100%;
+}
+
 .navbarContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.25rem 3.2rem; /* 10px 20px */
+  padding: 1rem 3.2rem; /* 10px 20px */
   background-color: #FFF;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* 0 2px 4px */
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); /* 0 2px 4px */
 }
 
 .logo {
-  height: 35px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: rgb(3, 3, 39);
 }
 
 .navItems {
@@ -26,20 +34,29 @@
   font-weight: bold;
   border-radius: 1rem;
   padding: 0.5rem 0.75rem; 
-  transition: all 0.3s ease; 
+  transition: all 0.5s ease; 
   box-sizing: border-box; 
 }
 
 .navItem:hover{
-  border-bottom: 1px solid #FF5733;
+  border-bottom: 1px solid  rgb(47, 47, 243);;
   border-radius: 0rem;
 }
 .navItem.active {
-  background:  #FF5733 ;
-  border-radius: 1rem;
+  background: rgb(47, 47, 243);
+  border-radius: 0.5rem;
   color: #FFF;
 }
 .navItem.active:hover {
   border: none;
 }
 
+.connect{
+  background: rgb(73, 73, 226);
+  color: white;
+  border-radius: 0.3em;
+}
+.connect:hover{
+  background-color: blue;
+  border-radius: 0.3em;
+}
