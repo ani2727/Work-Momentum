@@ -11,7 +11,7 @@ const Statistics = ()=>{
             </div>
             <div className="stat-card">
                 <div className="stat-header">
-                    <h1>100+</h1>
+                    <h1>50+</h1>
                     <img src='https://crustlab.com/wp-content/uploads/2021/05/ic-emplo1.svg' alt='fav' />
                 </div>
                 <p>EMPLOYEES ON BOARD</p>
