@@ -1,0 +1,98 @@
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 5em;
+}
+.servicesHeading {
+  font-size: 2rem;
+}
+
+.servicesHeadingHrLine {
+  background-color: rgb(105, 172, 254);
+  width: 4em;
+  height: 0.1em;
+  border: none;
+}
+
+.servicesDescription {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 2em 0em;
+}
+
+@media screen and (max-width: 900px) {
+  .servicesDescription {
+    font-size: 0.8rem;
+  }
+}
+
+ul {
+  padding: 0;
+}
+
+.serviceProductCardContainer {
+  display: flex;
+  border-radius: 1em;
+  list-style-type: none;
+  margin: 2em 0;
+  box-shadow: gray 0.05em 0.05em 0.05em 0.1em;
+  outline: none;
+  overflow: hidden;
+  height: 20em;
+}
+
+.servicesImageContainer {
+  width: 50%;
+  height: 100%;
+}
+
+.leftImage .servicesImageContainer {
+  order: 0;
+}
+
+.rightImage .servicesImageContainer {
+  order: 1;
+}
+
+.servicesImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em 0 0 1em;
+}
+
+.leftImage .servicesImage {
+  border-radius: 1em 0 0 1em;
+}
+
+.rightImage .servicesImage {
+  border-radius: 0 1em 1em 0;
+}
+
+.serviceProductDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  width: 50%;
+}
+
+.serviceProductDetailsHeading {
+  font-size: 2em;
+  margin-bottom: 0.6em;
+}
+
+.serviceProductDetailsDescription {
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+.serviceProductDetailsButton {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  outline: none;
+  align-self: flex-start;
+  color: rgb(50, 140, 250);
+  font-weight: 600;
+  cursor: pointer;
+}
