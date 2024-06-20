@@ -9,6 +9,7 @@ import {
   faPhp,
 } from "@fortawesome/free-brands-svg-icons";
 import ServicesCards from "./ServicesCards";
+import { Link } from "react-router-dom";
 
 const servicesData = [
   {
@@ -65,9 +66,9 @@ const Services = () => {
           <p className={styles.servicesHeaderContainerDescription}>
             We deliver high quality software with top-tier nearshore talent.
           </p>
-          <button type="button" className={styles.connectButton}>
+          <Link to="/contact-us" className={styles.connectButton}>
             Let's Connect
-          </button>
+          </Link>
         </div>
       </div>
       <div className={styles.servicesContainer}>

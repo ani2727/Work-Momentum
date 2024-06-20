@@ -65,7 +65,7 @@ const Navbar = () => {
           className="logo"
         />
         <ul className="navItems">
-          <li>
+          <li onMouseEnter={() => setIsHovered(false)}>
             <NavLink className="navItem" activeClassName="active" exact to="/">
               Home
             </NavLink>
@@ -156,7 +156,7 @@ const Navbar = () => {
               </div>
             )}
           </li>
-          <li>
+          <li onMouseEnter={() => setIsHovered(false)}>
             <NavLink
               className="navItem"
               activeClassName="active"
@@ -166,7 +166,7 @@ const Navbar = () => {
               Products
             </NavLink>
           </li>
-          <li>
+          <li onMouseEnter={() => setIsHovered(false)}>
             <NavLink
               className="navItem"
               activeClassName="active"
@@ -176,7 +176,7 @@ const Navbar = () => {
               Careers
             </NavLink>
           </li>
-          <li>
+          <li onMouseEnter={() => setIsHovered(false)}>
             <NavLink
               className="navItem"
               activeClassName="active"
@@ -186,12 +186,12 @@ const Navbar = () => {
               About Us
             </NavLink>
           </li>
-          <li>
+          <li onMouseEnter={() => setIsHovered(false)}>
             <NavLink
               className="navItem connect"
               activeClassName="active"
               exact
-              to="/contact"
+              to="/contact-us"
             >
               Let's Connect
             </NavLink>

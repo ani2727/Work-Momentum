@@ -27,7 +27,7 @@
 
 .servicesHeaderContainerDescription {
   font-size: 1.5em;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   color: rgb(68, 67, 67);
   font-weight: 600;
 }
@@ -38,6 +38,7 @@
   border-radius: 0.3em;
   border: none;
   padding: 1em 1em;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 468px) {
