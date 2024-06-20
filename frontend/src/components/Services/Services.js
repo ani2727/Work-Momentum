@@ -1,75 +1,146 @@
 import React from "react";
 import styles from "./Services.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faReact,
+  faNodeJs,
+  faPython,
+  faJava,
+  faPhp,
+} from "@fortawesome/free-brands-svg-icons";
+import ServicesCards from "./ServicesCards";
 
-const servicesDetails = [
+const servicesData = [
   {
-    id: 1,
-    imageUrl: "https://rb.gy/sek2qt",
-    serviceType: "Web Development",
+    icon: "Code",
+    title: "Custom Software Development",
     description:
-      "At Work Momentum, we specialize in crafting exceptional web experiences tailored to your unique needs. Our team of experienced web developers utilizes the latest technologies and best practices to create websites that not only look stunning but also perform seamlessly across all devices. From simple static sites to complex web applications, we have the expertise to bring your vision to life. Whether you're looking to launch a new website or revamp an existing one, we're here to help you every step of the way.",
+      "Create tailored software solutions that meet specific business needs, incorporating both front-end and back-end technologies.",
   },
   {
-    id: 2,
-    imageUrl: "https://www.isquarebs.com/img/web-app-development-choose.svg",
-    serviceType: "App Development",
+    icon: "Mobile",
+    title: "Mobile App Development",
     description:
-      "Transform your ideas into innovative mobile applications with Work Momentum. Our dedicated team of app developers is passionate about creating user-friendly and feature-rich apps that resonate with your target audience. Whether you're targeting iOS, Android, or cross-platform solutions, we have the skills and experience to build the perfect app for your business. From initial concept to final deployment, we'll work closely with you to ensure your app exceeds your expectations and drives results.",
+      "Develop high-performance, secure mobile applications for both iOS and Android platforms.",
   },
   {
-    id: 3,
-    imageUrl:
-      "https://www.betasofttechnology.com/wp-content/uploads/2022/03/aws-banner.png",
-    serviceType: "Cloud Computing",
+    icon: "CheckCircle",
+    title: "QA and Testing",
     description:
-      "Harness the power of the cloud with Work Momentum's AWS and DevOps services. Our team of certified AWS experts can help you leverage Amazon Web Services to build scalable, secure, and reliable cloud solutions that meet your business needs. Whether you're looking to migrate to the cloud, optimize your existing AWS infrastructure, or implement DevOps best practices, we've got you covered. With our expertise in automation, continuous integration, and continuous delivery, we'll streamline your development process and accelerate your time to market. Let us be your trusted partner in the cloud journey.",
+      "Guarantee the robustness and reliability of technology products through comprehensive manual and automated QA processes.",
+  },
+  {
+    icon: "Brain",
+    title: "AI and Data Science",
+    description:
+      "Leverage AI and data science to uncover insights, drive decisions, and develop intelligent solutions using advanced data engineering principles.",
+  },
+  {
+    icon: "PaintBrush",
+    title: "UX/UI Design",
+    description:
+      "Design intuitive and engaging user experiences for websites and mobile applications, focusing on usability and aesthetics.",
+  },
+  {
+    icon: "Server",
+    title: "Platform and Infrastructure",
+    description:
+      "Ensure scalable and resilient applications with robust platform and infrastructure solutions, including cybersecurity and DevOps practices.",
   },
 ];
 
 const Services = () => {
   return (
     <div>
+      <div className={styles.servicesHeaderContainer}>
+        <div className={styles.servicesHeaderContainerContent}>
+          <h1 className={styles.servicesHeaderContainerHeading}>
+            Scale your software development efforts.
+          </h1>
+          <h1
+            className={`${styles.servicesHeaderContainerHeading} ${styles.servicesHeaderContainerHeadingColor}`}
+          >
+            Effortlessly.
+          </h1>
+          <p className={styles.servicesHeaderContainerDescription}>
+            We deliver high quality software with top-tier nearshore talent.
+          </p>
+          <button type="button" className={styles.connectButton}>
+            Let's Connect
+          </button>
+        </div>
+      </div>
       <div className={styles.servicesContainer}>
-        <h1 className={styles.servicesHeading}>Our Services</h1>
-        <hr className={styles.servicesHeadingHrLine} />
-        <p className={styles.servicesDescription}>
-          Work Momentum is a software company that delivers services based on
-          user requests. They provide end-to-end software development services,
-          ranging from consultancy and ideation of your ideas and product
-          strategy to designing UX/UI mockups, development, testing, launch,
-          support, and maintenance. Work Momentum is a long-term partner you can
-          entrust to work on your product at any stage.
-        </p>
-
-        <ul>
-          {servicesDetails.map((eachService, index) => (
-            <li
-              key={eachService.id}
-              className={`${styles.serviceProductCardContainer} ${
-                index % 2 === 0 ? styles.leftImage : styles.rightImage
-              }`}
-            >
-              <div className={styles.servicesImageContainer}>
-                <img
-                  src={eachService.imageUrl}
-                  alt={eachService.serviceType}
-                  className={styles.servicesImage}
-                />
-              </div>
-              <div className={styles.serviceProductDetailsContainer}>
-                <h1 className={styles.serviceProductDetailsHeading}>
-                  {eachService.serviceType}
-                </h1>
-                <p className={styles.serviceProductDetailsDescription}>
-                  {eachService.description}
-                </p>
-                <button className={styles.serviceProductDetailsButton}>
-                  Learn More
-                </button>
-              </div>
-            </li>
+        <h1 className={styles.servicesHeaderContainerHeading}>
+          Software development services.
+        </h1>
+        <h1 className={styles.servicesHeaderContainerHeading}>
+          From Concept To Completion.
+        </h1>
+        <div className={styles.services}>
+          {servicesData.map((service, index) => (
+            <div className={styles.serviceItem} key={index}>
+              <div
+                className={`${styles.serviceIcon} ${
+                  styles[`serviceIcon${service.icon}`]
+                }`}
+              ></div>
+              <h3 className={styles.title}>{service.title}</h3>
+              <p className={styles.description}>{service.description}</p>
+            </div>
           ))}
-        </ul>
+        </div>
+      </div>
+      <div className={styles.techStackContainer}>
+        <div className={styles.stackDescription}>
+          <h2>What's Our Stack?</h2>
+          <p>
+            Leverage over 100 software engineers to build your digital products
+            in whatever tech stack you need.
+          </p>
+        </div>
+        <div className={styles.stackGrid}>
+          <div className={styles.stackItem}>
+            <FontAwesomeIcon icon={faReact} className={styles.icon} />
+            <span>React</span>
+          </div>
+          <div className={styles.stackItem}>
+            <FontAwesomeIcon icon={faNodeJs} className={styles.icon} />
+            <span>Node.js</span>
+          </div>
+          <div className={styles.stackItem}>
+            <FontAwesomeIcon icon={faPython} className={styles.icon} />
+            <span>Python</span>
+          </div>
+
+          <div className={styles.stackItem}>
+            <FontAwesomeIcon icon={faJava} className={styles.icon} />
+            <span>Java</span>
+          </div>
+
+          <div className={styles.stackItem}>
+            <FontAwesomeIcon icon={faPhp} className={styles.icon} />
+            <span>PHP</span>
+          </div>
+        </div>
+      </div>
+
+      <ServicesCards />
+
+      <div className={styles.FooterContainer}>
+        <div className={styles.FooterTextSection}>
+          <h1>Want to accelerate software development at your company?</h1>
+          <p>See how we can help.</p>
+          <a href="/contact-us" className={styles.FooterScheduleButton}>
+            Schedule a Call
+          </a>
+        </div>
+        <div className={styles.FooterImageSection}>
+          <img
+            src="https://bytessolutions.in/images/gen/homemenu.jpg"
+            alt="Services"
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,224 @@
+.serviceDetailsContainer {
+  margin: 5em 5em;
+}
+
+.serviceHeaderContainer {
+  display: flex;
+}
+
+.servicesImageContainer {
+  width: 50%;
+}
+
+.leftImage .servicesImageContainer {
+  order: 0;
+}
+
+.rightImage .servicesImageContainer {
+  order: 1;
+}
+
+.servicesImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em 1em 1em 1em;
+}
+
+.serviceProductDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2em;
+  width: 50%;
+}
+
+.serviceProductDetailsHeading {
+  font-size: 2em;
+  margin-bottom: 0.6em;
+  color: #333;
+}
+
+.serviceProductDetailsHeading:hover {
+  color: rgb(50, 140, 250);
+}
+
+.serviceProductDetailsDescription {
+  font-size: 1em;
+  margin-bottom: 2em;
+}
+
+.serviceProductDetailsButton {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  outline: none;
+  align-self: flex-start;
+  color: rgb(50, 140, 250);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .serviceHeaderContainer {
+    flex-direction: column;
+  }
+  .servicesImageContainer {
+    width: 100%;
+    height: 15em; /* Adjust height for mobile */
+  }
+
+  .servicesImage {
+    border-radius: 1em;
+  }
+
+  .serviceProductDetailsContainer {
+    width: 100%;
+    padding: 1em;
+  }
+
+  .serviceProductDetailsHeading {
+    font-size: 1.5em;
+    margin-bottom: 0.4em;
+  }
+
+  .serviceProductDetailsDescription {
+    font-size: 0.9em;
+    margin-bottom: 1em;
+  }
+
+  .serviceProductDetailsButton {
+    font-size: 1em;
+  }
+}
+
+.servicesWeOfferedHeadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1em 0;
+}
+
+.servicesWeOfferedHeadingContainerHrLine {
+  background-color: rgb(105, 172, 254);
+  width: 40%;
+  height: 0.1em;
+  border: none;
+  margin: 0.5em 0;
+}
+
+.servicesWeOfferedHeading {
+  font-size: 2em;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .servicesWeOfferedHeadingContainerHrLine {
+    width: 60%;
+  }
+
+  .servicesWeOfferedHeading {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .servicesWeOfferedHeadingContainerHrLine {
+    width: 80%;
+  }
+
+  .servicesWeOfferedHeading {
+    font-size: 1.2em;
+  }
+}
+
+.servicesWeOfferedConaitner {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.serviceOfferdItem {
+  width: 30%;
+  margin: 1em;
+  padding: 1em;
+  background: #f9f9f9;
+  border-radius: 0.5em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.serviceOfferdItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.serviceOfferdItemHeading {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.serviceOfferdItemDescription {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0); /* Optional: slide up effect */
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Initially hidden elements */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Fade-in class when in viewport */
+.fade-in-visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Media query for medium screens (tablets, small laptops) */
+@media screen and (max-width: 768px) {
+  .serviceOfferdItem {
+    width: 45%;
+    margin: 1em 0.5em;
+  }
+
+  .serviceOfferdItemHeading {
+    font-size: 1.3em;
+  }
+
+  .serviceOfferdItemDescription {
+    font-size: 0.9em;
+  }
+}
+
+/* Media query for small screens (mobile devices) */
+@media screen and (max-width: 560px) {
+  .serviceOfferdItem {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .serviceOfferdItemHeading {
+    font-size: 0.8em;
+  }
+
+  .serviceOfferdItemDescription {
+    font-size: 0.6em;
+  }
+}

@@ -1,98 +1,335 @@
+.servicesHeaderContainer {
+  background-image: url("https://powell-software.com/wp-content/uploads/2021/08/Human-Resources-Employee-Experience-Platform-1.png");
+  background-size: cover; /* Cover the entire container */
+  background-position: center; /* Center the background image */
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 22em 10em;
+  margin: 4.2em 0em;
+}
+
+.servicesHeaderContainerContent {
+  width: 40vw;
+}
+
+.servicesHeaderContainerHeading {
+  font-size: 3em;
+  margin-bottom: 0.2em;
+  color: rgb(67, 66, 66);
+}
+
+.servicesHeaderContainerHeadingColor {
+  color: rgb(46, 136, 246);
+}
+
+.servicesHeaderContainerDescription {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  color: rgb(68, 67, 67);
+  font-weight: 600;
+}
+
+.connectButton {
+  background: rgb(73, 73, 226);
+  color: white;
+  border-radius: 0.3em;
+  border: none;
+  padding: 1em 1em;
+}
+
+@media screen and (max-width: 468px) {
+  .servicesHeaderContainerHeading {
+    font-size: 0.5em;
+  }
+  .servicesHeaderContainerDescription {
+    font-size: 0.5em;
+    margin-right: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesHeaderContainerHeading {
+    font-size: 1em;
+  }
+  .servicesHeaderContainerDescription {
+    font-size: 0.7em;
+    margin-right: 2em;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .servicesHeaderContainerHeading {
+    font-size: 2em;
+  }
+
+  .servicesHeaderContainerDescription {
+    font-size: 1em;
+    margin-right: 2em;
+  }
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.serviceItem {
+  flex: 1 1 calc(33.333% - 40px);
+  margin: 10px;
+  padding: 20px;
+  text-align: start;
+  transition: transform 0.2s ease-in-out;
+}
+
+.serviceItem:hover {
+  transform: translateY(-5px);
+}
+
+.serviceIcon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #ff6347;
+}
+
+.serviceIconCode::before {
+  content: "🔧";
+}
+
+.serviceIconMobile::before {
+  content: "📱";
+}
+
+.serviceIconCheckCircle::before {
+  content: "✔️";
+}
+
+.serviceIconBrain::before {
+  content: "🧠";
+}
+
+.serviceIconPaintBrush::before {
+  content: "🎨";
+}
+
+.serviceIconServer::before {
+  content: "💻";
+}
+
+.title {
+  color: #333;
+  font-size: 1.25em;
+  margin: 10px 0;
+}
+
+.description {
+  color: #666;
+  font-size: 1em;
+  margin: 0;
+}
+
+.FooterContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: #fff;
+  padding: 2em 5em;
+}
+
+.FooterTextSection {
+  max-width: 50%;
+}
+
+.FooterTextSection h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.FooterTextSection p {
+  font-size: 1.5em;
+  color: #f58220;
+}
+
+.FooterScheduleButton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.FooterScheduleButton:hover {
+  background-color: #218838;
+}
+
+.FooterImageSection {
+  max-width: 40%;
+}
+
+.FooterImageSection img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .FooterContainer {
+    flex-direction: column;
+    text-align: center;
+    padding: 0em 0em;
+  }
+
+  .FooterImageSection {
+    max-width: 100%;
+  }
+
+  .FooterTextSection {
+    margin-bottom: 20px;
+  }
+
+  .FooterImageSection img {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.techStackContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 1em;
+  background-color: #f8f8f8;
+}
+
+.stackDescription {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.stackDescription h2 {
+  font-size: 2em;
+  color: #333;
+}
+
+.stackDescription p {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.allTechnologiesLink {
+  color: #ff5722;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1em;
+  display: inline-block;
+}
+
+.stackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1em;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.stackItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.stackItem span {
+  font-size: 1em;
+  color: #333;
+  margin-top: 0.5em;
+}
+
+.stackItem:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .techStackContainer {
+    padding: 1.5em;
+  }
+
+  .stackDescription h2 {
+    font-size: 1.8em;
+  }
+
+  .stackDescription p {
+    font-size: 1em;
+  }
+
+  .allTechnologiesLink {
+    font-size: 0.9em;
+  }
+
+  .stackItem span {
+    font-size: 0.9em;
+  }
+
+  .icon {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .techStackContainer {
+    padding: 1em;
+  }
+
+  .stackDescription h2 {
+    font-size: 1.6em;
+  }
+
+  .stackDescription p {
+    font-size: 0.9em;
+  }
+
+  .allTechnologiesLink {
+    font-size: 0.8em;
+  }
+
+  .stackItem {
+    padding: 0.8em;
+  }
+
+  .icon {
+    font-size: 1.5em;
+  }
+
+  .stackItem span {
+    font-size: 0.8em;
+  }
+}
+
 .servicesContainer {
   display: flex;
   flex-direction: column;
   margin: 5em 5em;
-}
-.servicesHeading {
-  font-size: 2rem;
-}
-
-.servicesHeadingHrLine {
-  background-color: rgb(105, 172, 254);
-  width: 4em;
-  height: 0.1em;
-  border: none;
-}
-
-.servicesDescription {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin: 2em 0em;
-}
-
-@media screen and (max-width: 900px) {
-  .servicesDescription {
-    font-size: 0.8rem;
-  }
-}
-
-ul {
-  padding: 0;
-}
-
-.serviceProductCardContainer {
-  display: flex;
-  border-radius: 1em;
-  list-style-type: none;
-  margin: 2em 0;
-  box-shadow: gray 0.05em 0.05em 0.05em 0.1em;
-  outline: none;
-  overflow: hidden;
-  height: 20em;
-}
-
-.servicesImageContainer {
-  width: 50%;
-  height: 100%;
-}
-
-.leftImage .servicesImageContainer {
-  order: 0;
-}
-
-.rightImage .servicesImageContainer {
-  order: 1;
-}
-
-.servicesImage {
-  width: 100%;
-  height: 100%;
-  border-radius: 1em 0 0 1em;
-}
-
-.leftImage .servicesImage {
-  border-radius: 1em 0 0 1em;
-}
-
-.rightImage .servicesImage {
-  border-radius: 0 1em 1em 0;
-}
-
-.serviceProductDetailsContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 2em;
-  width: 50%;
-}
-
-.serviceProductDetailsHeading {
-  font-size: 2em;
-  margin-bottom: 0.6em;
-}
-
-.serviceProductDetailsDescription {
-  font-size: 1em;
-  margin-bottom: 2em;
-}
-
-.serviceProductDetailsButton {
-  font-size: 1.2em;
-  background: none;
-  border: none;
-  outline: none;
-  align-self: flex-start;
-  color: rgb(50, 140, 250);
-  font-weight: 600;
-  cursor: pointer;
 }

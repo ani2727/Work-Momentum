@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
   position: fixed;
   width: 100%;
 }
@@ -7,9 +7,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem; /* 10px 20px */
-  background-color: #FFF;
-  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); /* 0 2px 4px */
+  padding: 1rem 3.2rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
 .navbarContainer img{
@@ -31,38 +31,159 @@
   font-size: 16px;
   font-weight: bold;
   border-radius: 1rem;
-  padding: 0.5rem 0.75rem; 
-  transition: all 0.5s ease; 
-  box-sizing: border-box; 
+  padding: 0.5rem 0.75rem;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
 }
 
-.navItem:hover{
-  border-bottom: 1px solid  rgb(47, 47, 243);;
+.navItem:hover {
+  border-bottom: 1px solid rgb(47, 47, 243);
   border-radius: 0rem;
 }
+
 .navItem.active {
   background: rgb(47, 47, 243);
   border-radius: 0.5rem;
-  color: #FFF;
+  color: #fff;
 }
+
 .navItem.active:hover {
   border: none;
 }
-.letsConnectContainer{
+
+.popupContainer {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
   display: flex;
+  flex-direction: column; /* Ensure popup container is a column layout */
+  padding: 2em;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.firstContainer {
+  display: flex;
+  margin-bottom: 1em;
+  align-items: center;
+}
+
+.firstContainer div {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  margin-left: 1em;
+  width: 50%;
+}
+
+.services-link {
+  text-align: start;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.services-link:hover {
+  text-decoration: underline;
+}
+
+.popupRow {
+  display: flex;
+  flex-wrap: wrap; /* Allow popup sections to wrap to next line if necessary */
+}
+
+.popupSection {
+  flex: 1; /* Each popup section takes equal space */
+  margin-right: 2em;
+}
+
+.firstContainer p {
+  margin: 0em 0em;
+}
+
+.popupSection h3 {
+  margin: 1em 0;
+  color: rgb(96, 140, 250);
+  text-align: center;
+}
+
+.popupSection ul {
+  padding: 0;
+}
+
+.popupSection li {
+  list-style-type: none;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.popupItemsLogo {
+  margin-right: 1em;
+}
+
+.popupItemsHeading {
+  color: rgb(45, 45, 45);
+  font-size: 1em;
+}
+
+.popupItemsHeading:hover {
+  text-decoration: underline;
+}
+
+.popupItemsPara {
+  color: rgb(140, 138, 138);
+  font-size: 0.8em;
+  text-align: left;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.technologies-content {
+  font-size: 0.9em;
+}
+
+.technologies-content:hover {
+  text-decoration: underline;
+}
+
+.solutions-content {
+  font-size: 0.9em;
+}
+
+.solutions-content:hover {
+  text-decoration: underline;
+}
+
+.connect {
   background: rgb(73, 73, 226);
   align-items: center;
   justify-content: center;
   border-radius: 0.3em;
 }
-.message-icon{
-  margin-left: 10px;
-}
 
-.connect{
-  color: white;
-}
-.connect:hover{
+.connect:hover {
   background-color: blue;
   border-radius: 0.3em;
   border: none;
