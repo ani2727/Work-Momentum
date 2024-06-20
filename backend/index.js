@@ -6,7 +6,13 @@ const {UserModel} = require("./models/user")
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin:"https://work-momentum-sigma.vercel.app",
+  optionsSuccessStatus:200
+};
+
+app.use(cors(corsOptions));
 
 // MongoDB connection URL (replace with your actual credentials and database name)
 const dbUrl = "mongodb+srv://anil:anil1234@clusterworkmomentum.ffz9qde.mongodb.net/WorkMomentum";

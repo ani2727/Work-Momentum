@@ -14,7 +14,7 @@ const Contact = () => {
     event.preventDefault(); // Prevent default form submission
 
     try {
-      const res = await axios.post("http://localhost:3001/user/register", {
+      const res = await axios.post("https://work-momentum.onrender.com/user/register", {
         userName: name,
         email: mail
       });
