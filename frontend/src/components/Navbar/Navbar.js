@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, Link } from "react-router-dom";
 import "./Navbar.css";
 import { RiTeamFill } from "react-icons/ri";
 import { SiEsotericsoftware } from "react-icons/si";
@@ -59,11 +59,13 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarContainer">
-        <img
-          src="logoworkmomentum.png"
-          alt="Work Momentum"
-          className="logo"
-        />
+        <Link to="/">
+          <img
+            src="logoworkmomentum.png"
+            alt="Work Momentum"
+            className="logo"
+          />
+        </Link>
         <ul className="navItems">
           <li onMouseEnter={() => setIsHovered(false)}>
             <NavLink className="navItem" activeClassName="active" exact to="/">
