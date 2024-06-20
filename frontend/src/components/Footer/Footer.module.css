@@ -1,5 +1,5 @@
 .footerContainer {
-    background: linear-gradient(to top, rgb(0, 0, 0), rgb(41, 41, 41));
+    background: linear-gradient(to top, rgb(95, 92, 92), rgb(85, 83, 83));
 
     margin-top: auto;
     padding: 20px 0;
@@ -96,7 +96,7 @@
     width: 10rem;
     padding: 8px;
     border: none;
-    background-color: #b32100;
+    background-color: rgb(47, 47, 243);
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
@@ -104,7 +104,7 @@
 }
 
 .subscribeButton:hover {
-    background-color: #fd4920;
+    background-color:  rgb(37, 37, 207);
 }
 
 .helpCenter p {

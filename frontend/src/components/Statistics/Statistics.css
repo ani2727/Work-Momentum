@@ -1,0 +1,33 @@
+.stat-cards{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.stat-card{
+    box-shadow: 0.1em -0.1em 0.3em 0.08em rgb(233, 226, 226);
+    height: 5.5em;
+    width: 8em;
+    border-radius: 0.5em;
+    margin: 1em;
+    margin-top: 2em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.stat-card h1{
+    font-size: 2rem;
+    color: rgb(60,60,224);
+}
+.stat-card p{
+    font-size: 0.7rem;
+}
+.stat-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.stat-header img{
+    width: 20%;
+}
