@@ -4,17 +4,17 @@ const Statistics = ()=>{
         <div className="stat-cards">
             <div className="stat-card">
                 <div className="stat-header">
-                    <h1>10+</h1>
+                    <h1>CI/CD Tools</h1>
                     <img src='https://crustlab.com/wp-content/uploads/2021/05/ic-gambling1.svg' alt='fav' />
                 </div>
-                <p>PROJECTS DELIVERED</p>
+                <p>Jenkins, GitLab</p>
             </div>
             <div className="stat-card">
                 <div className="stat-header">
-                    <h1>50+</h1>
+                    <h1>Cloud Providers</h1>
                     <img src='https://crustlab.com/wp-content/uploads/2021/05/ic-emplo1.svg' alt='fav' />
                 </div>
-                <p>EMPLOYEES ON BOARD</p>
+                <p>AWS, Azure, GCP</p>
             </div>
             <div className="stat-card">
                 <div className="stat-header">

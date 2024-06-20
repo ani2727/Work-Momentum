@@ -8,6 +8,7 @@ import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import ServiceDetails from "./components/Services/ServiceDetails";
+import Products from "./components/Products/Products";
 
 const appRouter = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/services/:service",
         element: <ServiceDetails />,
+      },
+      {
+        path: "/products",
+        element: <Products />,
       },
     ],
   },
