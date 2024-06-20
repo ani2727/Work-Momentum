@@ -60,7 +60,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbarContainer">
         <img
-          src="./abhiTrainings-logo-white.png"
+          src="logoworkmomentum.png"
           alt="Work Momentum"
           className="logo"
         />

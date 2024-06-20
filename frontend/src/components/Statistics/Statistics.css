@@ -7,7 +7,7 @@
 .stat-card{
     box-shadow: 0.1em -0.1em 0.2em 0.1em rgb(209, 202, 202);
     height: 5.5em;
-    width: 8em;
+    width: 10em;
     border-radius: 0.5em;
     margin: 1em;
     margin-top: 2em;
@@ -22,7 +22,7 @@
     color: rgb(60,60,224);
 }
 .stat-card p{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
 }
 .stat-header{
     display: flex;

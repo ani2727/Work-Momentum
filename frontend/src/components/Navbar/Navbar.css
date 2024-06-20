@@ -12,11 +12,10 @@
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  height: 30px;
-  font-weight: bold;
-  font-size: 1.2em;
-  color: rgb(3, 3, 39);
+
+.logo{
+  align-self: center;
+  width: 70px;
 }
 
 .navItems {
@@ -127,6 +126,7 @@
   align-items: center;
 }
 
+
 .flexCol {
   display: flex;
   flex-direction: column;
@@ -181,11 +181,14 @@
 
 .connect {
   background: rgb(73, 73, 226);
-  color: white;
+  align-items: center;
+  justify-content: center;
   border-radius: 0.3em;
+  color: #fff;
 }
 
 .connect:hover {
   background-color: blue;
   border-radius: 0.3em;
+  border: none;
 }

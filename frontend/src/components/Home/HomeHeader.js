@@ -1,4 +1,5 @@
 import "./Home.css"
+import {Link} from "react-router-dom"
 const HomeHeader = ()=>{
     return(
         <div className="home-header">
@@ -11,7 +12,8 @@ const HomeHeader = ()=>{
                 pariatur.
             </p>
             <div>
-                <button>Let's talk</button></div>
+                <Link to='/contact-us'><button>Let's Connect</button></Link>
+                </div>
             </div>
                 <div className='home-body-img'>
                     <img src="hemoimage.svg" alt='' />
