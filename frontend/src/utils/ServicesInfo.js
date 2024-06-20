@@ -83,8 +83,8 @@ const servicesDetails = [
     id: 3,
     imageUrl:
       "https://www.betasofttechnology.com/wp-content/uploads/2022/03/aws-banner.png",
-    title: "AWS & DevOps",
-    path: "aws-devops",
+    title: "Cloud & DevOps",
+    path: "cloud-devops",
     description:
       "Harness the power of the cloud with Work Momentum's AWS and DevOps services. Our team of certified AWS experts can help you leverage Amazon Web Services to build scalable, secure, and reliable cloud solutions that meet your business needs. Whether you're looking to migrate to the cloud, optimize your existing AWS infrastructure, or implement DevOps best practices, we've got you covered. With our expertise in automation, continuous integration, and continuous delivery, we'll streamline your development process and accelerate your time to market. Let us be your trusted partner in the cloud journey.",
     servicesOffered: [
