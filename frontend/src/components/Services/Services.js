@@ -1,32 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Services.module.css";
-
-const servicesDetails = [
-  {
-    id: 1,
-    imageUrl: "https://rb.gy/sek2qt",
-    serviceType: "Web Development",
-    description:
-      "At Work Momentum, we specialize in crafting exceptional web experiences tailored to your unique needs. Our team of experienced web developers utilizes the latest technologies and best practices to create websites that not only look stunning but also perform seamlessly across all devices. From simple static sites to complex web applications, we have the expertise to bring your vision to life. Whether you're looking to launch a new website or revamp an existing one, we're here to help you every step of the way.",
-  },
-  {
-    id: 2,
-    imageUrl: "https://www.isquarebs.com/img/web-app-development-choose.svg",
-    serviceType: "App Development",
-    description:
-      "Transform your ideas into innovative mobile applications with Work Momentum. Our dedicated team of app developers is passionate about creating user-friendly and feature-rich apps that resonate with your target audience. Whether you're targeting iOS, Android, or cross-platform solutions, we have the skills and experience to build the perfect app for your business. From initial concept to final deployment, we'll work closely with you to ensure your app exceeds your expectations and drives results.",
-  },
-  {
-    id: 3,
-    imageUrl:
-      "https://www.betasofttechnology.com/wp-content/uploads/2022/03/aws-banner.png",
-    serviceType: "Cloud Computing",
-    description:
-      "Harness the power of the cloud with Work Momentum's AWS and DevOps services. Our team of certified AWS experts can help you leverage Amazon Web Services to build scalable, secure, and reliable cloud solutions that meet your business needs. Whether you're looking to migrate to the cloud, optimize your existing AWS infrastructure, or implement DevOps best practices, we've got you covered. With our expertise in automation, continuous integration, and continuous delivery, we'll streamline your development process and accelerate your time to market. Let us be your trusted partner in the cloud journey.",
-  },
-];
+import ServicesInfo from "../../utils/ServicesInfo";
 
 const Services = () => {
+  const [servicesDetails, setServicesDetails] = useState([]);
+  useEffect(() => {
+    const data = ServicesInfo();
+    setServicesDetails(data);
+  }, []);
   return (
     <div>
       <div className={styles.servicesContainer}>
@@ -58,7 +39,7 @@ const Services = () => {
               </div>
               <div className={styles.serviceProductDetailsContainer}>
                 <h1 className={styles.serviceProductDetailsHeading}>
-                  {eachService.serviceType}
+                  {eachService.title}
                 </h1>
                 <p className={styles.serviceProductDetailsDescription}>
                   {eachService.description}
