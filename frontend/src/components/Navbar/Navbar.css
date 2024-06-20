@@ -12,7 +12,9 @@
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 
-.navbarContainer img{
+
+.logo{
+  align-self: center;
   width: 70px;
 }
 
@@ -124,6 +126,7 @@
   align-items: center;
 }
 
+
 .flexCol {
   display: flex;
   flex-direction: column;
@@ -181,6 +184,7 @@
   align-items: center;
   justify-content: center;
   border-radius: 0.3em;
+  color: #fff;
 }
 
 .connect:hover {

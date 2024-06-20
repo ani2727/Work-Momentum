@@ -49,8 +49,8 @@
     margin: 20px auto;
     border-radius: 10px;
     flex-direction: column;
-    background: rgb(109, 109, 196);
-    color: white;
+    background: rgb(218, 218, 221);
+    color: rgb(54, 53, 53);
 }
 
 .member {
@@ -60,10 +60,6 @@
     margin: 2em;
 }
 
-.about-members:hover{
-    background: rgb(74, 74, 204);
-
-}
 
 .member-image img {
     width: 350px; /* Adjust as needed */
