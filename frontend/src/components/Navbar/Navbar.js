@@ -8,7 +8,7 @@ const Navbar = () => {
       <img 
         src="./abhiTrainings-logo-white.png" 
         alt='Work Momentum' 
-        className="logo" 
+        className="companylogo" 
       />
       <ul className="navItems">
         <li><NavLink className="navItem" activeClassName="active" exact to="/">Home</NavLink></li>
