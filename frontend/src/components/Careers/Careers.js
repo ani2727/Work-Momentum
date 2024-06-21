@@ -36,7 +36,7 @@ const Careers = () => {
         </div>
       </section>
       <section className="careers-mid-section">
-        <h1>Why Work Momentum?</h1>
+        <h1>Why WorkMomentum?</h1>
         <p>
           Join a company where new ideas are always welcome. Together, let’s
           drive innovation and redefine the tech landscape.

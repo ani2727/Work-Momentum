@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ensures the form is centered vertically */
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -10,10 +10,9 @@
   .contact-data {
     width: 400px; /* Adjust width as needed */
     padding:20px;
-    border: 1px solid #ccc;
+    border: 1px solid #969595;
     border-radius: 5px;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    color: black;
     height: 25em;
     margin-right: auto;
     margin-top: 3em;
@@ -58,7 +57,7 @@
     font-weight: bold;
   }
   
-  button:hover {
+  .contact-data button:hover {
     background-color: #0056b3;
   }
   
