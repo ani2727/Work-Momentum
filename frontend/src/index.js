@@ -7,8 +7,8 @@ import Services from "./components/Services/Services";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import Careers from "./components/Careers/Careers";
-import JobOpportunities from "./components/JobOpportunities.js/JobOpportunities";
+import ServiceDetails from "./components/Services/ServiceDetails";
+import Products from "./components/Products/Products";
 
 const appRouter = createBrowserRouter([
   {
@@ -24,21 +24,20 @@ const appRouter = createBrowserRouter([
         element: <Services />,
       },
       {
-        path: "/careers",
-        element: <Careers />,
-      },
-      {
-        path: "/job-opportunities",
-        element: <JobOpportunities />,
-      },
-
-      {
         path: "/about",
         element: <About />,
       },
       {
-        path: "/contact",
+        path: "/contact-us",
         element: <Contact />,
+      },
+      {
+        path: "/services/:service",
+        element: <ServiceDetails />,
+      },
+      {
+        path: "/products",
+        element: <Products />,
       },
     ],
   },
