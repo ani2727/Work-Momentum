@@ -111,12 +111,12 @@
 
 .popupRow {
   display: flex;
-  flex-wrap: wrap; /* Allow popup sections to wrap to next line if necessary */
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .popupSection {
-  flex: 1; /* Each popup section takes equal space */
-  margin-right: 2em;
+  margin-right: 4em;
 }
 
 .firstContainer p {
@@ -183,6 +183,8 @@
 
 .technologies-content {
   font-size: 0.9em;
+  text-align: left;
+  font-weight: 400;
 }
 
 .technologies-content:hover {
@@ -191,6 +193,8 @@
 
 .solutions-content {
   font-size: 0.9em;
+  text-align: left;
+  font-weight: 500;
 }
 
 .solutions-content:hover {
