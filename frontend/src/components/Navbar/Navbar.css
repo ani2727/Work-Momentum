@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
   position: fixed;
   width: 100%;
 }
@@ -8,7 +8,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 3.2rem; /* 10px 20px */
-  background-color: #FFF;
+  background-color: #fff;
   box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); /* 0 2px 4px */
 }
 
@@ -33,30 +33,97 @@
   font-size: 16px;
   font-weight: bold;
   border-radius: 1rem;
-  padding: 0.5rem 0.75rem; 
-  transition: all 0.5s ease; 
-  box-sizing: border-box; 
+  padding: 0.5rem 0.75rem;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+  align-self: center;
 }
 
-.navItem:hover{
-  border-bottom: 1px solid  rgb(47, 47, 243);;
+.navItem:hover {
+  border-bottom: 1px solid rgb(47, 47, 243);
   border-radius: 0rem;
 }
 .navItem.active {
   background: rgb(47, 47, 243);
   border-radius: 0.5rem;
-  color: #FFF;
+  color: #fff;
 }
 .navItem.active:hover {
   border: none;
 }
 
-.connect{
+.connect {
   background: rgb(73, 73, 226);
   color: white;
   border-radius: 0.3em;
 }
-.connect:hover{
+.connect:hover {
   background-color: blue;
   border-radius: 0.3em;
+}
+
+.careers-nav-item {
+  position: relative;
+}
+
+.down-icon {
+  margin: auto 10px;
+}
+
+.up-icon {
+  margin: auto 10px;
+  display: none;
+}
+
+.careers-nav-item:hover .down-icon {
+  display: none;
+}
+
+.careers-nav-item:hover .up-icon {
+  display: inline;
+}
+
+.careers-nav-item:hover .careers-hover-card-container {
+  display: block;
+}
+.careers-hover-card-container {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 25px;
+  right: -20px;
+  width: max-content;
+  padding: 30px 20px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.careers-hover-card {
+  display: flex;
+  width: max-content;
+}
+.careers-hover-card .left-part {
+  padding: 20px;
+  border-right: 1px solid black;
+}
+.careers-hover-card a {
+  text-decoration: none;
+  color: #000;
+}
+.careers-hover-card .left-part h2 {
+  font-size: 1.5rem;
+  color: #000;
+}
+.careers-hover-card .left-part h2 span {
+  margin-left: 2px;
+  font-size: 1.5rem;
+  color: rgb(47, 47, 243);
+}
+.careers-hover-card .left-part p {
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.careers-hover-card .right-part {
+  padding: 20px;
 }

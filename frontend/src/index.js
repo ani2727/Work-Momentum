@@ -4,31 +4,41 @@ import "./index.css";
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Services from "./components/Services/Services";
-import Home from './components/Home/Home'
-import About from "./components/About/About"
+import Home from "./components/Home/Home";
+import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-
+import Careers from "./components/Careers/Careers";
+import JobOpportunities from "./components/JobOpportunities.js/JobOpportunities";
 
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
-        path:"/",
-        element:<Home/>
+        path: "/",
+        element: <Home />,
       },
       {
-        path:"/services",
-        element:<Services/>
+        path: "/services",
+        element: <Services />,
       },
       {
-        path:"/about",
-        element:<About/>
+        path: "/careers",
+        element: <Careers />,
       },
       {
-        path:"/contact",
-        element:<Contact/>
+        path: "/job-opportunities",
+        element: <JobOpportunities />,
+      },
+
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
