@@ -1,7 +1,8 @@
 const servicesDetails = [
   {
     id: 1,
-    imageUrl: "https://rb.gy/sek2qt",
+    imageUrl:
+      "https://t3.ftcdn.net/jpg/02/14/53/92/360_F_214539232_YnUrtuwUEt84gHuU0qG8l7OwZvH4rnPG.jpg",
     title: "Web Development",
     path: "web-development",
     description:
@@ -41,7 +42,8 @@ const servicesDetails = [
   },
   {
     id: 2,
-    imageUrl: "https://www.isquarebs.com/img/web-app-development-choose.svg",
+    imageUrl:
+      "https://t4.ftcdn.net/jpg/02/00/20/89/360_F_200208909_tvpqUno6arZycC8jWtduKEITDcqszvwj.jpg",
     title: "App Development",
     path: "app-development",
     description:
