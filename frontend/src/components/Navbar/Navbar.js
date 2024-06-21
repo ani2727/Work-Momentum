@@ -3,8 +3,7 @@ import { NavLink, useNavigate, Link } from "react-router-dom";
 import "./Navbar.css";
 import { RiTeamFill } from "react-icons/ri";
 import { SiEsotericsoftware } from "react-icons/si";
-import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
-
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 const servicesData = {
   engagementModels: [
@@ -80,6 +79,11 @@ const Navbar = () => {
             activeClassName="active"
           >
             Services
+            {isHovered ? (
+              <IoIosArrowUp className="services-up-icon" />
+            ) : (
+              <IoIosArrowDown className="down-icon" />
+            )}
             {isHovered && (
               <div
                 className="popupContainer"
@@ -177,7 +181,10 @@ const Navbar = () => {
               Products
             </NavLink>
           </li>
-          <li className="careers-nav-item">
+          <li
+            className="careers-nav-item"
+            onMouseEnter={() => setIsHovered(false)}
+          >
             <NavLink
               className="navItem"
               activeClassName="active"
