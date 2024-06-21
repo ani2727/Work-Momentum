@@ -26,6 +26,8 @@ const Contact = () => {
 
 const closePopup = () => {
     setPopupOpen(false);
+    setName(''); 
+    setMail(''); 
     Name.current.value = '';
     Email.current.value = '';
 }
