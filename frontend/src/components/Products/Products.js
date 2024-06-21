@@ -1,5 +1,5 @@
 import "./Products.css"
-import Statistics from "../Statistics/Statistics"
+import StatisticsTechStack from "../Statistics/StatisticsTechStack";
 const Products = ()=>{
     return (
         <div className='products'>
@@ -32,7 +32,7 @@ const Products = ()=>{
             </div>
             <div className='tech-stack'>
                 <h1>Our Technology Stack</h1>
-                <Statistics/>
+                <StatisticsTechStack/>
             </div>
             <div class="why-devops">
             <h1>Why Choose One Click DevOps</h1>

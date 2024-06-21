@@ -16,7 +16,7 @@ function Footer() {
         <div className={styles.logoIcons}>
           <div className={styles.logoContainer}>
             <img
-              src="/abhiTrainings-logo-white.png"
+              src="logoworkmomentum.svg"
               alt="WM LOGO"
               className={styles.logo}
             />
@@ -75,7 +75,9 @@ function Footer() {
           <h3>Subscribe</h3>
           <form>
             <div className={styles.emailInputContainer}>
-              <MdEmail className={styles.emailIcon} />
+            <a href="mailto:abhitrainings@gmail.com" className={styles.emailIcon}>
+              <MdEmail />
+            </a>
               <input
                 type="email"
                 placeholder="Your email"

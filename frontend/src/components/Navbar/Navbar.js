@@ -3,8 +3,7 @@ import { NavLink, useNavigate, Link } from "react-router-dom";
 import "./Navbar.css";
 import { RiTeamFill } from "react-icons/ri";
 import { SiEsotericsoftware } from "react-icons/si";
-import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
-
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 const servicesData = {
   engagementModels: [
@@ -61,7 +60,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarContainer">
-        <Link to="/">
+        <Link onMouseEnter={() => setIsHovered(false)} to="/">
           <img
             src="logoworkmomentum.png"
             alt="Work Momentum"
@@ -80,6 +79,11 @@ const Navbar = () => {
             activeClassName="active"
           >
             Services
+            {isHovered ? (
+              <IoIosArrowUp className="services-up-icon" />
+            ) : (
+              <IoIosArrowDown className="down-icon" />
+            )}
             {isHovered && (
               <div
                 className="popupContainer"
@@ -87,8 +91,8 @@ const Navbar = () => {
               >
                 <div className="popup">
                   <div className="firstContainer">
-                    <SiEsotericsoftware />
-                    <div>
+                    <div className="headerSection">
+                      <SiEsotericsoftware className="firstContainerLogo" />
                       <NavLink
                         exact
                         to="/services"
@@ -97,15 +101,22 @@ const Navbar = () => {
                       >
                         Software Development Services
                       </NavLink>
+                    </div>
+                    <div className="contentSection">
                       <p>
                         Boost your tech projects with outsourced development.
+                      </p>
+                      <p>
                         Custom engagement models designed to fit your needs.
                       </p>
                     </div>
                   </div>
+
                   <div className="popupRow">
                     <div className="popupSection">
-                      <h3>Engagement models.</h3>
+                      <h3 className="popupSectionHeading">
+                        Engagement models.
+                      </h3>
                       <ul>
                         {servicesData.engagementModels.map((item, index) => (
                           <li
@@ -170,7 +181,10 @@ const Navbar = () => {
               Products
             </NavLink>
           </li>
-          <li className="careers-nav-item">
+          <li
+            className="careers-nav-item"
+            onMouseEnter={() => setIsHovered(false)}
+          >
             <NavLink
               className="navItem"
               activeClassName="active"

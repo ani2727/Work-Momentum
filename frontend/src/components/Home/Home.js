@@ -1,8 +1,9 @@
 import React from "react";
 import HomeHeader from "./HomeHeader";
-import Statistics from "../Statistics/Statistics";
 import ServicesCards from "../Services/ServicesCards";
 import Products from "../Products/Products";
+import Statistics from "../Statistics/Statistics";
+import Careers from "../Careers/Careers";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Statistics />
       <ServicesCards />
       <Products />
+      <Careers/>
     </div>
   );
 };

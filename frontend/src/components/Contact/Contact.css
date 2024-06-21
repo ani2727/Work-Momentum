@@ -2,20 +2,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Ensures the form is centered vertically */
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   
   .contact-data {
-    width: 300px; /* Adjust width as needed */
-    padding: 20px;
-    border: 1px solid #ccc;
+    width: 400px; /* Adjust width as needed */
+    padding:20px;
+    border: 1px solid #969595;
     border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    height: 25em;
+    margin-right: auto;
+    margin-top: 3em;
+  }
+  .contact-data h1{
+    margin-bottom: 1em;
   }
   
   .Email {
-    margin-bottom: 10px;
+    margin-bottom: 1em;
   }
   
   .Email label {
@@ -26,15 +33,18 @@
   
   .Email input[type='text'],
   .Email input[type='email'] {
-    width: calc(100% - 20px); /* Adjust input width minus padding */
+    width: calc(100% - 0px); /* Adjust input width minus padding */
     padding: 8px;
-    font-size: 14px;
+    font-size: 18px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box; /* Ensures padding is included in width */
+    background: transparent;
   }
-  
-  button {
+  .Email input:focus{
+    outline:none;
+  }
+  .contact-data button {
     width: 100%;
     padding: 10px;
     margin-top: 10px;
@@ -44,9 +54,100 @@
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: bold;
   }
   
-  button:hover {
+  .contact-data button:hover {
     background-color: #0056b3;
   }
   
+
+
+  /* popup css */
+
+.contact-popup-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.contact-popup-btn {
+  padding: 1em 2em;
+  background: #ffff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 5em;
+  border-radius: 5%;
+  color: black;
+}
+
+.contact-popup {
+  width: 400px;
+  background: #fff;
+  border-radius: 5%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0 30px 30px;
+  visibility: hidden;
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, top 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.contact-popup img {
+  width: 100px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contact-popup h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0px 10px;
+}
+
+.contact-popup button {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0px;
+  background-color: #007bff;
+  color: #fff;
+  outline: none;
+  border-radius: 3%;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0px 5px 5px rgb(0, 0, 0, .2);
+}
+
+.contact-popup.open-popup {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  z-index: 3000;
+}
+
+.contact-popup.close-popup {
+  animation: popupOut 0.3s forwards;
+}
+
+@keyframes popupOut {
+  0% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: translate(-50%, -50%) scale(0.1);
+      top: 0;
+      opacity: 0;
+  }
+}
