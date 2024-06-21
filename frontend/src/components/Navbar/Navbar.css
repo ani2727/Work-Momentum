@@ -214,3 +214,72 @@
   border-radius: 0.3em;
   border: none;
 }
+
+
+.careers-nav-item {
+  position: relative;
+}
+
+.down-icon {
+  margin: auto 10px;
+}
+
+.up-icon {
+  margin: auto 10px;
+  display: none;
+}
+
+.careers-nav-item:hover .down-icon {
+  display: none;
+}
+
+.careers-nav-item:hover .up-icon {
+  display: inline;
+}
+
+.careers-nav-item:hover .careers-hover-card-container {
+  display: block;
+}
+.careers-hover-card-container {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 2em;
+  right: -12em;
+  width: max-content;
+  padding: 30px 20px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: #000;
+
+}
+
+.careers-hover-card {
+  display: flex;
+  width: max-content;
+}
+.careers-hover-card .left-part {
+  padding: 20px;
+  border-right: 1px solid black;
+}
+.careers-hover-card a {
+  text-decoration: none;
+  color: #000;
+}
+.careers-hover-card .left-part h2 {
+  font-size: 1.5rem;
+  color: #000;
+}
+.careers-hover-card .left-part h2 span {
+  margin-left: 2px;
+  font-size: 1.5rem;
+  color: rgb(47, 47, 243);
+}
+.careers-hover-card .left-part p {
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.careers-hover-card .right-part {
+  padding: 20px;
+}
