@@ -3,6 +3,8 @@ import { NavLink, useNavigate, Link } from "react-router-dom";
 import "./Navbar.css";
 import { RiTeamFill } from "react-icons/ri";
 import { SiEsotericsoftware } from "react-icons/si";
+import { IoIosArrowUp, IoIosArrowDown } from 'react-icons/io';
+
 
 const servicesData = {
   engagementModels: [
@@ -168,7 +170,7 @@ const Navbar = () => {
               Products
             </NavLink>
           </li>
-          <li onMouseEnter={() => setIsHovered(false)}>
+          <li className="careers-nav-item">
             <NavLink
               className="navItem"
               activeClassName="active"
@@ -176,7 +178,24 @@ const Navbar = () => {
               to="/careers"
             >
               Careers
+              <IoIosArrowUp className="up-icon" />
+              <IoIosArrowDown className="down-icon" />
             </NavLink>
+            <div className="careers-hover-card-container">
+              <div className="careers-hover-card">
+                <div className="left-part">
+                  <Link to="/careers">
+                    <h2>
+                      Careers<span>.</span>
+                    </h2>
+                  </Link>
+                  <p>What is it like working at Work Momentum?</p>
+                </div>
+                <div className="right-part">
+                  <Link to="/job-opportunities">Job Opportunities</Link>
+                </div>
+              </div>
+            </div>
           </li>
           <li onMouseEnter={() => setIsHovered(false)}>
             <NavLink
