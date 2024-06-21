@@ -14,6 +14,8 @@ const Contact = () => {
   const [popupImage, setPopupImage] = useState(defaultImageUrl);
   const [header,setHeader] = useState('');
 
+  const Name = useRef();
+  const Email = useRef();
 
   const openPopup = (head,message, imageUrl = defaultImageUrl) => {
     setPopupMessage(message);
@@ -24,19 +26,17 @@ const Contact = () => {
 
 const closePopup = () => {
     setPopupOpen(false);
+    Name.current.value = '';
+    Email.current.value = '';
 }
 
-  const Name = useRef();
-  const Email = useRef();
-
+ 
   const handleSubmit = async (event) => {
     event.preventDefault(); 
 
     try {
           await axios.post("https://work-momentum.onrender.com/user/register", {userName: name,email: mail});
           openPopup('Thank You','Your details have been successfully submitted. Thanks', 'https://res.cloudinary.com/dkdslxqqx/image/upload/v1718458077/404-tick_e51zjo.png');
-          Name.current.value = '';
-          Email.current.value = '';
 
     } 
     catch (err) 
