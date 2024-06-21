@@ -62,23 +62,41 @@
   border: 1px solid #ddd;
   z-index: 1000;
   display: flex;
-  flex-direction: column; /* Ensure popup container is a column layout */
+  flex-direction: column;
   padding: 2em;
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.firstContainer {
-  display: flex;
-  margin-bottom: 1em;
-  align-items: center;
-}
-
-.firstContainer div {
+.popup {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
-  margin-left: 1em;
-  width: 50%;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.firstContainerLogo {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.services-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+
+.contentSection {
+  text-align: left;
+  margin-left: 2.5em;
 }
 
 .services-link {
@@ -94,17 +112,11 @@
 .popupRow {
   display: flex;
   flex-wrap: wrap; /* Allow popup sections to wrap to next line if necessary */
-  justify-content: space-around;
 }
 
 .popupSection {
- /* Each popup section takes equal space */
+  flex: 1; /* Each popup section takes equal space */
   margin-right: 2em;
-  align-items: flex-start;
-}
-
-.popupSection h3{
-  text-align: left;
 }
 
 .firstContainer p {
@@ -114,7 +126,7 @@
 .popupSection h3 {
   margin: 1em 0;
   color: rgb(96, 140, 250);
-  text-align: center;
+  text-align: left;
 }
 
 .popupSection ul {
@@ -152,9 +164,10 @@
 }
 
 .popupItemsPara {
-  color: rgb(140, 138, 138);
+  color: rgb(113, 112, 112);
   font-size: 0.8em;
   text-align: left;
+  font-weight: 500;
 }
 
 @keyframes fadeIn {
@@ -170,7 +183,6 @@
 
 .technologies-content {
   font-size: 0.9em;
-  text-align: left;
 }
 
 .technologies-content:hover {
@@ -179,7 +191,6 @@
 
 .solutions-content {
   font-size: 0.9em;
-  text-align: left;
 }
 
 .solutions-content:hover {
