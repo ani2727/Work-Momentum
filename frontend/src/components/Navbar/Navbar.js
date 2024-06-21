@@ -85,8 +85,8 @@ const Navbar = () => {
               >
                 <div className="popup">
                   <div className="firstContainer">
-                    <SiEsotericsoftware />
-                    <div>
+                    <div className="headerSection">
+                      <SiEsotericsoftware className="firstContainerLogo" />
                       <NavLink
                         exact
                         to="/services"
@@ -95,15 +95,22 @@ const Navbar = () => {
                       >
                         Software Development Services
                       </NavLink>
+                    </div>
+                    <div className="contentSection">
                       <p>
                         Boost your tech projects with outsourced development.
+                      </p>
+                      <p>
                         Custom engagement models designed to fit your needs.
                       </p>
                     </div>
                   </div>
+
                   <div className="popupRow">
                     <div className="popupSection">
-                      <h3>Engagement models.</h3>
+                      <h3 className="popupSectionHeading">
+                        Engagement models.
+                      </h3>
                       <ul>
                         {servicesData.engagementModels.map((item, index) => (
                           <li

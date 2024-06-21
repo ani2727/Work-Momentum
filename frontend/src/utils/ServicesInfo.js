@@ -82,7 +82,7 @@ const servicesDetails = [
   {
     id: 3,
     imageUrl:
-      "https://www.betasofttechnology.com/wp-content/uploads/2022/03/aws-banner.png",
+      "https://t3.ftcdn.net/jpg/04/82/07/90/360_F_482079087_jTfhGFhJgMeWt40zI9qhgjTQX7zXtLd0.jpg",
     title: "Cloud & DevOps",
     path: "cloud-devops",
     description:
