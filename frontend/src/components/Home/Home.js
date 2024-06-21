@@ -3,6 +3,8 @@ import HomeHeader from "./HomeHeader";
 import ServicesCards from "../Services/ServicesCards";
 import Products from "../Products/Products";
 import Statistics from "../Statistics/Statistics";
+import Careers from "../Careers/Careers";
+
 const Home = () => {
   return (
     <div className="home">
@@ -10,6 +12,7 @@ const Home = () => {
       <Statistics />
       <ServicesCards />
       <Products />
+      <Careers/>
     </div>
   );
 };
