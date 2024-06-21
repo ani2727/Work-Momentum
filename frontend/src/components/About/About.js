@@ -14,25 +14,25 @@ const About = () => {
           </p>
         </div>
         <div className='mission-image'>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYH0y8v3R3xomRSuH-BHH125yGfT0SoMpSa4uASuYwWbDIjcMf4VIZAjxZlB9HR7WCYU&usqp=CAU" alt=""/>
+          <img src="mission.svg" alt=""/>
         </div>
       </div>
       <div className='unique'>
-<h1>Why are we unique?</h1>
-<p>We have a unique vision and values guiding us in a specific direction. Our experience and commitment to operational excellence guarantee successful deliveries. But we go beyond creating exceptional solutions – we aim to be your trusted business partner.</p>
-<div className='products-offer'>
-<div className='products-offer-card'>
-<h2>Technical skills</h2>
-<p>The clients greatly appreciate the technical expertise of WorkMomentum's specialists in both web and mobile development. Our pros stay up-to-date with trends and best practices to craft innovative, reliable, and secure systems.</p>
-</div>
-<div className='products-offer-card'>
-<h2>Professionalism</h2>
-<p>You can count on us for timely delivery and the superior quality of provided services. To maximize our clients’ potential, we focus on producing business value every single day.</p>
-</div>
-<div className='products-offer-card'>
-<h2>Clear frameworks and procedures</h2>
-<p>Our well-defined workflows enable us to deliver first-class software consistently. The agile approach we use in product development ensures productivity and on-time deployment.</p>
-</div>
+      <h1>Why are we unique?</h1>
+      <p>We have a unique vision and values guiding us in a specific direction. Our experience and commitment to operational excellence guarantee successful deliveries. But we go beyond creating exceptional solutions – we aim to be your trusted business partner.</p>
+      <div className='products-offer'>
+      <div className='products-offer-card'>
+      <h2>Technical skills</h2>
+      <p>The clients greatly appreciate the technical expertise of WorkMomentum's specialists in both web and mobile development. Our pros stay up-to-date with trends and best practices to craft innovative, reliable, and secure systems.</p>
+      </div>
+      <div className='products-offer-card'>
+      <h2>Professionalism</h2>
+      <p>You can count on us for timely delivery and the superior quality of provided services. To maximize our clients’ potential, we focus on producing business value every single day.</p>
+      </div>
+      <div className='products-offer-card'>
+      <h2>Clear frameworks and procedures</h2>
+      <p>Our well-defined workflows enable us to deliver first-class software consistently. The agile approach we use in product development ensures productivity and on-time deployment.</p>
+      </div>
 
         <div className='products-offer-card'>
             <h2>Seamless sales process</h2>

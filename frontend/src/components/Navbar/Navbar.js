@@ -59,7 +59,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarContainer">
-        <Link to="/">
+        <Link onMouseEnter={() => setIsHovered(false)} to="/">
           <img
             src="logoworkmomentum.png"
             alt="Work Momentum"
