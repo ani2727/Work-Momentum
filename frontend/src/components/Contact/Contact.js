@@ -30,11 +30,14 @@ const closePopup = () => {
   const Email = useRef();
 
   const handleSubmit = async (event) => {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); 
 
     try {
           await axios.post("https://work-momentum.onrender.com/user/register", {userName: name,email: mail});
           openPopup('Thank You','Your details have been successfully submitted. Thanks', 'https://res.cloudinary.com/dkdslxqqx/image/upload/v1718458077/404-tick_e51zjo.png');
+          Name.current.value = '';
+          Email.current.value = '';
+
     } 
     catch (err) 
     {
