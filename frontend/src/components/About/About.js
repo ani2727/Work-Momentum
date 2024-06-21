@@ -1,9 +1,9 @@
 import './About.css';
 
 const About = () => {
- 
   return (
     <div className='about'>
+      <h1 className='about-header'>Building Tomorrow's Solutions Today</h1>
       <div className='vision'>
         <div className='mission'>
           <h1>Our Vision and Mission</h1>
@@ -18,40 +18,41 @@ const About = () => {
         </div>
       </div>
       <div className='unique'>
-<h1>Why are we unique?</h1>
-<p>We have a unique vision and values guiding us in a specific direction. Our experience and commitment to operational excellence guarantee successful deliveries. But we go beyond creating exceptional solutions – we aim to be your trusted business partner.</p>
-<div className='products-offer'>
-<div className='products-offer-card'>
-<h2>Technical skills</h2>
-<p>The clients greatly appreciate the technical expertise of WorkMomentum's specialists in both web and mobile development. Our pros stay up-to-date with trends and best practices to craft innovative, reliable, and secure systems.</p>
-</div>
-<div className='products-offer-card'>
-<h2>Professionalism</h2>
-<p>You can count on us for timely delivery and the superior quality of provided services. To maximize our clients’ potential, we focus on producing business value every single day.</p>
-</div>
-<div className='products-offer-card'>
-<h2>Clear frameworks and procedures</h2>
-<p>Our well-defined workflows enable us to deliver first-class software consistently. The agile approach we use in product development ensures productivity and on-time deployment.</p>
-</div>
-
-        <div className='products-offer-card'>
+        <h1>Why are we unique?</h1>
+        <p>We have a unique vision and values guiding us in a specific direction. Our experience and commitment to operational excellence guarantee successful deliveries. But we go beyond creating exceptional solutions – we aim to be your trusted business partner.</p>
+        <div className='products-offer'>
+          <div className='products-offer-card'>
+            <h2>Technical skills</h2>
+            <p>The clients greatly appreciate the technical expertise of WorkMomentum's specialists in both web and mobile development. Our pros stay up-to-date with trends and best practices to craft innovative, reliable, and secure systems.</p>
+          </div>
+          <div className='products-offer-card'>
+            <h2>Professionalism</h2>
+            <p>You can count on us for timely delivery and the superior quality of provided services. To maximize our clients’ potential, we focus on producing business value every single day.</p>
+          </div>
+          <div className='products-offer-card'>
+            <h2>Clear frameworks and procedures</h2>
+            <p>Our well-defined workflows enable us to deliver first-class software consistently. The agile approach we use in product development ensures productivity and on-time deployment.</p>
+          </div>
+          <div className='products-offer-card'>
             <h2>Seamless sales process</h2>
             <p>Experience a seamless sales journey with us. We prioritize our partners’ needs, promptly addressing any inquiries and offering comprehensive guidance at every step. We don’t merely provide services, we stand as your committed business ally.</p>
-        </div>
-        <div className='products-offer-card'>
+          </div>
+          <div className='products-offer-card'>
             <h2>Experience with SMCs and enterprises</h2>
             <p>Numerous collaborations with SMCs and large businesses are a testament to our capabilities. Whether you’re a growing company seeking scalable solutions or an established corporation with complex requirements, we’ve got you covered.</p>
-        </div>
-        <div className='products-offer-card'>
+          </div>
+          <div className='products-offer-card'>
             <h2>Industry level Exertise</h2>
             <p>Numerous collaborations with SMCs and large businesses are a testament to our capabilities. Whether you’re a growing company seeking scalable solutions or an established corporation with complex requirements, we’ve got you covered.</p>
+          </div>
         </div>
-    </div>
-  </div>
+      </div>
+      
       <div className='about-members'>
+      <h2 className='aboutus-heading'>About Us</h2>
         <div className='member'>
           <div className='member-image'>
-            <img src="abhilash1.png" alt="" />
+            <img src="abhilash1.png" alt="Abhilash" />
             <div>
               <h1>Abhilash</h1>
               <h3>CEO & Co-Founder</h3>
@@ -70,7 +71,7 @@ const About = () => {
             <p>With years of experience in developing full-stack web applications, Venkatesh has been instrumental in building the frameworks and platforms that power WorkMomentum diverse range of services. His technical acumen and strategic vision have helped the company achieve new heights.</p>
           </div>
           <div className='member-image'>
-            <img src="venkatesh.png" alt="" />
+            <img src="venkatesh.png" alt="Venkatesh" />
             <div>
               <h1>Venkatesh</h1>
               <h3>CTO & Co-Founder</h3>
