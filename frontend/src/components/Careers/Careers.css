@@ -20,6 +20,7 @@
     background-color: white;
     min-height: 70vh;
     min-width: 50%;
+    font-size: 1.1em;
   }
   .careers-top-section-right-part {
     height: 100%;
@@ -58,7 +59,7 @@
     padding: 1rem;
     border: none;
     border-radius: 0.5rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
   
@@ -72,6 +73,7 @@
     padding: 2rem;
     max-width: 1200px;
     margin: 0rem auto;
+    font-size: 1.5em;
   }
   .laptop-image-container {
     display: flex;
@@ -87,6 +89,7 @@
   .why-workmomentum-container {
     display: flex;
     flex-wrap: wrap;
+    font-size: 0.9em;
   }
   
   .why-card {
@@ -124,14 +127,14 @@
     gap: 1rem;
   }
   .careers-bottom-section .first-part h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   
   .careers-bottom-section .first-part p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .careers-bottom-section .first-part button {
-    font-size: 1rem;
+    font-size: 1.2rem;
     background-color: black;
     color: white;
     font-weight: 700;

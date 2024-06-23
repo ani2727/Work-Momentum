@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-
+import "../Products/Products.css"
 const About = () => {
   return (
     <div className="aboutUsContainer">
@@ -20,6 +20,16 @@ const About = () => {
           </p>
         </div>
       </div>
+
+      <div className="vision">
+        <h1>Our Vision and Mission</h1>
+        <p>At WorkMomentum Solutions, our mission is to provide a full spectrum of technology
+            solutions that include web development, mobile apps, cloud, and DevOps services,
+            all with a focus on one-click deployment. We aim to empower our customers with seamless,
+            efficient, and scalable solutions that meet their unique needs.
+          </p>
+      </div>
+
       <div className="unique">
         <h1>Why are we unique?</h1>
         <p>
@@ -34,7 +44,7 @@ const About = () => {
               <i className="fas fa-code"></i>
             </div>
             <h2>Technical skills</h2>
-            <p>
+            <p style={{fontSize:'20px'}}>
               The clients greatly appreciate the technical expertise of
               WorkMomentum's specialists in both web and mobile development. Our
               pros stay up-to-date with trends and best practices to craft
@@ -46,7 +56,7 @@ const About = () => {
               <i className="fas fa-briefcase"></i>
             </div>
             <h2>Professionalism</h2>
-            <p>
+            <p style={{fontSize:'20px'}}>
               You can count on us for timely delivery and the superior quality
               of provided services. To maximize our clients’ potential, we focus
               on producing business value every single day.
@@ -57,7 +67,7 @@ const About = () => {
               <i className="fas fa-tasks"></i>
             </div>
             <h2>Clear frameworks and procedures</h2>
-            <p>
+            <p style={{fontSize:'20px'}}>
               Our well-defined workflows enable us to deliver first-class
               software consistently. The agile approach we use in product
               development ensures productivity and on-time deployment.
@@ -68,7 +78,7 @@ const About = () => {
               <i className="fas fa-handshake"></i>
             </div>
             <h2>Seamless sales process</h2>
-            <p>
+            <p style={{fontSize:'20px'}}>
               Experience a seamless sales journey with us. We prioritize our
               partners’ needs, promptly addressing any inquiries and offering
               comprehensive guidance at every step. We don’t merely provide
@@ -80,7 +90,7 @@ const About = () => {
               <i className="fas fa-industry"></i>
             </div>
             <h2>Experience with SMCs and enterprises</h2>
-            <p>
+            <p style={{fontSize:'20px'}}>
               Numerous collaborations with SMCs and large businesses are a
               testament to our capabilities. Whether you’re a growing company
               seeking scalable solutions or an established corporation with
@@ -92,7 +102,7 @@ const About = () => {
               <i className="fas fa-chart-line"></i>
             </div>
             <h2>Industry level Expertise</h2>
-            <p>
+            <p style={{fontSize:'20px'}}>
               Numerous collaborations with SMCs and large businesses are a
               testament to our capabilities. Whether you’re a growing company
               seeking scalable solutions or an established corporation with
@@ -185,11 +195,11 @@ export default About;
 //       <div className='vision'>
 //         <div className='mission'>
 //           <h1>Our Vision and Mission</h1>
-//           <p>At WorkMomentum Solutions, our mission is to provide a full spectrum of technology
-//             solutions that include web development, mobile apps, cloud, and DevOps services,
-//             all with a focus on one-click deployment. We aim to empower our customers with seamless,
-//             efficient, and scalable solutions that meet their unique needs.
-//           </p>
+          // <p>At WorkMomentum Solutions, our mission is to provide a full spectrum of technology
+          //   solutions that include web development, mobile apps, cloud, and DevOps services,
+          //   all with a focus on one-click deployment. We aim to empower our customers with seamless,
+          //   efficient, and scalable solutions that meet their unique needs.
+          // </p>
 //         </div>
 //         <div className='mission-image'>
 //           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYH0y8v3R3xomRSuH-BHH125yGfT0SoMpSa4uASuYwWbDIjcMf4VIZAjxZlB9HR7WCYU&usqp=CAU" alt=""/>

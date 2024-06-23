@@ -60,12 +60,15 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarContainer">
-        <Link onMouseEnter={() => setIsHovered(false)} to="/">
+        <Link className="logo-name-link" onMouseEnter={() => setIsHovered(false)} to="/">
+          <div className="logo-name">
           <img
-            src="logoworkmomentum.png"
+            src="WorkMomentum.jpeg"
             alt="Work Momentum"
             className="logo"
           />
+          <h2 >WorkMomentum</h2>
+          </div>
         </Link>
         <ul className="navItems">
           <li onMouseEnter={() => setIsHovered(false)}>
@@ -121,7 +124,7 @@ const Navbar = () => {
                         {servicesData.engagementModels.map((item, index) => (
                           <li
                             key={index}
-                            onClick={() => handleNavigation(item.link)}
+                            // onClick={() => handleNavigation(item.link)}
                           >
                             <div className="flexRow">
                               <RiTeamFill className="popupItemsLogo" />
@@ -144,7 +147,7 @@ const Navbar = () => {
                         {servicesData.technologies.map((tech, index) => (
                           <li
                             key={index}
-                            onClick={() => handleNavigation(tech.link)}
+                            // onClick={() => handleNavigation(tech.link)}
                             className="technologies-content"
                           >
                             {tech.name}

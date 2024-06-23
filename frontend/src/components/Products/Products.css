@@ -2,21 +2,34 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
 /* General styling for the products section */
-.products {
-    margin: 6em 5em;
-    text-align: center;
+
+.products-banner-image{
+    background-image: url("https://t3.ftcdn.net/jpg/05/22/18/66/360_F_522186651_sjPyyCdVMZslnyIaM7HFRB2XQP22pFp2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+    margin: 5em 0em;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
     padding: 2em;
+}
+
+.products {
+    text-align: center;
     border-radius: 1em;
     scroll-behavior: smooth;
 }
 
+
 .products-header {
-    animation: fadeIn 2s ease-in-out;
+    font-size: 1.2em;
+    color: white;
 }
 
 .products-header h1 {
-    font-size: 3em;
-    animation: pulse 2s infinite;
+    font-size: 3.3em;
     transition: color 0.3s ease;
 }
 
@@ -24,14 +37,14 @@
     transition: color 0.3s ease;
 }
 
-.products-header h1:hover, .products-header h2:hover {
-    color: rgb(38, 38, 211);
-}
+
 
 .products-description {
     margin-top: 2em;
     font-size: 1.2em;
     animation: slideIn 1.5s ease-out;
+    color: white;
+    width: 45%;
 }
 
 .products-offer {
@@ -66,13 +79,12 @@
 }
 
 .products-offer-card h2 {
-    font-size: 1.5em;
     margin-bottom: 10px;
+    font-size: 2em;
 }
 
 .products-offer-card p {
     color: #464343;
-    font-size: 1em;
 }
 
 .products-offer-card:hover {
@@ -158,6 +170,11 @@
     z-index: 1000;
 }
 
+.tech-stack h1{
+    font-size: 2.4em;
+}
+
+
 /* General styling */
 .why-devops {
     margin: 3em 5em 6em; /* Adjust top margin to account for navbar height */
@@ -168,7 +185,7 @@
 }
 
 .why-devops h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin-bottom: 1em;
 }
 
@@ -187,13 +204,13 @@
 }
 
 .why-devops-card h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 0.5em;
     color: rgb(15, 15, 92);
 }
 
 .why-devops-card p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #666;
 }
 
@@ -272,5 +289,5 @@
     box-shadow: 0 -1px 2px 4px rgba(12, 12, 12, 0.1);
     animation-duration: 1s;
     animation-fill-mode: both;
-    font-size: 1.2em;
+    font-size: 1.4em;
 }

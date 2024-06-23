@@ -19,7 +19,7 @@
     transition: 0.3s;
 }
 .stat-card h1{
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgb(60,60,224);
 }
 .stat-card p{
@@ -33,13 +33,14 @@
 .stat-header img{
     width: 20%;
 }
+
 .stat-card:hover, .stat-card-tech:hover{
         transform: scale(1.15);
         cursor: pointer;
 }
 
 .tech h1{
-    font-size: 1em;
+    font-size: 1.4em;
     color: rgb(15,15,92);
 }
 .stat-card-tech {
@@ -54,8 +55,8 @@
     transition: 0.3s;
     padding: 1em;
     margin: 1em;
-
+    flex-direction: column;
 }
 .stat-card-tech p{
-    font-size: 0.89em;
+    font-size: 1em;
 }

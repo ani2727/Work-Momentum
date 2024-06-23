@@ -16,10 +16,11 @@ function Footer() {
         <div className={styles.logoIcons}>
           <div className={styles.logoContainer}>
             <img
-              src="logoworkmomentum.svg"
+              src="WorkMomentum.jpeg"
               alt="WM LOGO"
               className={styles.logo}
             />
+            WorkMomentum
           </div>
 
           <div className={styles.iconsContainer}>

@@ -15,26 +15,19 @@ import {
   faGoogle,
   faMicrosoft,
   faJsSquare,
-  faJenkins,
-  faLinux,
-  faHtml5,
   faCss3Alt,
   faBootstrap,
 } from "@fortawesome/free-brands-svg-icons";
 
 import {
   faDatabase,
-  faServer,
   faTools,
-  faBox,
-  faProjectDiagram,
   faVial,
   faFire,
   faSearch,
   faCog,
   faCloud,
   faWind,
-  faEllipsisH,
 } from "@fortawesome/free-solid-svg-icons";
 
 import { MdReadMore } from "react-icons/md";
