@@ -1,7 +1,4 @@
-.home {
-  margin: 6em 0em;
-  
-}
+
 
 .home-header {
   display: flex;
@@ -52,4 +49,10 @@
 }
 .home-body-img img {
   width: 110%;
+}
+
+
+.our-products-header{
+  font-weight: bold;
+  font-size: 3em;
 }

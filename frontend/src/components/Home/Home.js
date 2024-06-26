@@ -1,18 +1,20 @@
 import React from "react";
-import HomeHeader from "./HomeHeader";
-import ServicesCards from "../Services/ServicesCards";
 import Products from "../Products/Products";
-import Statistics from "../Statistics/Statistics";
 import Careers from "../Careers/Careers";
+import Services from "../Services/Services";
+import About from "../About/About"
+import "./Home.css"
 
 const Home = () => {
   return (
     <div className="home">
-      <HomeHeader />
-      <Statistics />
-      <ServicesCards />
+      {/* <HomeHeader /> */}
+      {/* <Statistics /> */}
+      <Services/>
+        <h1 className="our-products-header">Our Products</h1>
       <Products />
       <Careers/>
+      <About/>
     </div>
   );
 };

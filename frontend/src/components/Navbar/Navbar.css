@@ -14,18 +14,10 @@
 
 .logo {
   align-self: center;
-  width: 70px;
+  width: 100px;
   cursor: pointer;
 }
-.logo-name{
-  display: flex;
-  align-items: center;
-  color: black;
-  text-decoration: #fff;
-}
-.logo-name-link{
-  text-decoration: none;
-}
+
 .navItems {
   list-style: none;
   display: flex;

@@ -63,11 +63,10 @@ const Navbar = () => {
         <Link className="logo-name-link" onMouseEnter={() => setIsHovered(false)} to="/">
           <div className="logo-name">
           <img
-            src="WorkMomentum.jpeg"
+            src="https://i.ibb.co/gFk50sH/Pi7-Image-Cropper.png"
             alt="Work Momentum"
             className="logo"
           />
-          <h2 >WorkMomentum</h2>
           </div>
         </Link>
         <ul className="navItems">
