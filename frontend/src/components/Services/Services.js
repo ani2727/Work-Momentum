@@ -32,7 +32,7 @@ import {
 
 import { MdReadMore } from "react-icons/md";
 
-import ServicesCards from "./ServicesCards";
+// import ServicesCards from "./ServicesCards";
 import { Link } from "react-router-dom";
 import SoftwareDevelopmentCards from "./SoftwareDevelopmentCards";
 
@@ -193,7 +193,7 @@ const Services = () => {
         </div>
       </div>
 
-      <ServicesCards />
+      {/* <ServicesCards /> */}
 
       <div className={styles.FooterContainer}>
         <div className={styles.FooterTextSection}>
