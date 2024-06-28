@@ -64,7 +64,7 @@ const Navbar = () => {
           <div className="logo-name">
           <img
             src="https://i.ibb.co/gFk50sH/Pi7-Image-Cropper.png"
-            alt="Work Momentum"
+            alt="WorkMomentum"
             className="logo"
           />
           </div>
@@ -208,7 +208,7 @@ const Navbar = () => {
                   <p>What is it like working at Work Momentum?</p>
                 </div>
                 <div className="right-part">
-                  <Link to="/job-opportunities">Job Opportunities</Link>
+                  <Link to="/careers">Job Opportunities</Link>
                 </div>
               </div>
             </div>

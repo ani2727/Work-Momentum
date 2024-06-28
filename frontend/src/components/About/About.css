@@ -11,14 +11,14 @@
     justify-content: center;
     background-color: #fff;
     backdrop-filter: blur(100px);
-    border-radius: 10px;
     overflow: hidden;
+    height: 20em;
   }
   
   .aboutUs-introText {
     position: absolute;
     left: 2rem;
-    color: rgb(0, 0, 0);
+    color: white;
   }
   
   .aboutUs-welove, .aboutUs-vision-title {
@@ -28,6 +28,7 @@
     -webkit-background-clip: text;
     color: transparent;
     font-size: 2.5em;
+    color: white;
   }
   
   .aboutUs-welove > span {
@@ -38,7 +39,7 @@
     font-size: 1.3rem;
     margin-top: 1rem;
     width: 40%;
-    color: rgb(0, 0, 0);
+    color: white;
   }
   
   .aboutUs-image {
@@ -52,6 +53,7 @@
   }
 .vision h1{
   color: rgb(15, 15, 92);
+  font-size: 2.4em;
 }
   
   .unique {
@@ -69,9 +71,9 @@
   
   .unique p {
     margin-bottom: 1em;
-    align-self: center;
     text-align: justify;
-    width: 80%;
+    margin:0.5em  2em;    
+    color: #131212;
   }
   
   .products-offer {
@@ -129,7 +131,6 @@
     background: linear-gradient(to right, #0035a7, #000f97);
     -webkit-background-clip: text;
     color: transparent;
-
   }
   .about-members {
     display: flex;
@@ -154,13 +155,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 2em 0;
     width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background: #fff;
     padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1em;
 }
 
 .member:hover {
