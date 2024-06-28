@@ -109,7 +109,26 @@
   margin-bottom: 0.5rem;
 }
 
+.careers-jobs-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0rem auto;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.careers-jobs-section .explore-more {
+  font-size: 2rem;
+}
+
+.careers-jobs-section .explore-more:hover {
+  color: black;
+}
+
 .careers-bottom-section {
+  max-width: 1200px;
   margin: 2rem 2rem;
   display: flex;
   border-radius: 1rem;

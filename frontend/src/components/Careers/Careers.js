@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaGlobeAsia } from "react-icons/fa";
-
+import { FiSearch } from "react-icons/fi";
+import { JobsData } from "../../utils/JobsData";
 import "./Careers.css";
 const Careers = () => {
+  const [jobSearchInput, setJobSearchInput] = useState("");
+  const jobResults = JobsData.filter((eachItem) =>
+    eachItem.jobTitle.toLowerCase().includes(jobSearchInput)
+  );
+  const updatedJobResults = jobResults.slice(0, 4);
   return (
     <div className="careers-home">
       <section className="careers-top-section">
@@ -158,6 +164,26 @@ const Careers = () => {
           </div>
         </div>
       </section>
+      <section className="careers-jobs-section">
+        <h1 className="heading">Explore our Open Positions</h1>
+        <div className="job-search-container">
+          <FiSearch style={{ height: "1.5rem", width: "1.5rem" }} />
+          <input
+            className="job-search-input"
+            placeholder="Job Title, keyword"
+            value={jobSearchInput}
+            onChange={(e) => setJobSearchInput(e.target.value)}
+          />
+        </div>
+        <div className="job-search-results-container">
+          {updatedJobResults.map((eachItem) => (
+            <JobItemCard data={eachItem} />
+          ))}
+        </div>
+        <Link className="explore-more" to="/job-opportunities">
+          Explore More Jobs
+        </Link>
+      </section>
       <section className="careers-bottom-section">
         <div className="first-part">
           <h1>We don't just fill vacancies.</h1>
@@ -185,3 +211,18 @@ const Careers = () => {
 };
 
 export default Careers;
+const JobItemCard = (props) => {
+  const { data } = props;
+  return (
+    <div className="job-item-card">
+      <div className="top-section">
+        <p className="title">{data.jobTitle}</p>
+        <p className="description">{data.jobDescription}</p>
+      </div>
+      <div className="bottom-section">
+        <p>{data.employmentType}</p>
+        <button>Apply Now</button>
+      </div>
+    </div>
+  );
+};

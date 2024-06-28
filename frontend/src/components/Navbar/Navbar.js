@@ -49,47 +49,52 @@ const servicesData = {
 };
 
 const Navbar = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(null);
+
   const navigate = useNavigate();
 
   const handleNavigation = (link) => {
-    setIsHovered(false);
+    setIsHovered(null);
     navigate(link);
   };
 
   return (
     <div className="navbar">
       <div className="navbarContainer">
-        <Link className="logo-name-link" onMouseEnter={() => setIsHovered(false)} to="/">
+        <Link
+          className="logo-name-link"
+          onMouseEnter={() => setIsHovered("landing")}
+          to="/"
+        >
           <div className="logo-name">
-          <img
-            src="https://i.ibb.co/gFk50sH/Pi7-Image-Cropper.png"
-            alt="Work Momentum"
-            className="logo"
-          />
+            <img
+              src="https://i.ibb.co/gFk50sH/Pi7-Image-Cropper.png"
+              alt="Work Momentum"
+              className="logo"
+            />
           </div>
         </Link>
         <ul className="navItems">
-          <li onMouseEnter={() => setIsHovered(false)}>
+          <li onMouseEnter={() => setIsHovered("Home")}>
             <NavLink className="navItem" activeClassName="active" exact to="/">
               Home
             </NavLink>
           </li>
           <li
-            onMouseEnter={() => setIsHovered(true)}
+            onMouseEnter={() => setIsHovered("Services")}
             className="navItem"
             activeClassName="active"
           >
             Services
-            {isHovered ? (
+            {isHovered === "Services" ? (
               <IoIosArrowUp className="services-up-icon" />
             ) : (
               <IoIosArrowDown className="down-icon" />
             )}
-            {isHovered && (
+            {isHovered === "Services" && (
               <div
                 className="popupContainer"
-                onMouseLeave={() => setIsHovered(false)}
+                onMouseLeave={() => setIsHovered(null)}
               >
                 <div className="popup">
                   <div className="firstContainer">
@@ -98,7 +103,7 @@ const Navbar = () => {
                       <NavLink
                         exact
                         to="/services"
-                        onClick={() => setIsHovered(false)}
+                        onClick={() => setIsHovered(null)}
                         className="services-link"
                       >
                         Software Development Services
@@ -173,7 +178,7 @@ const Navbar = () => {
               </div>
             )}
           </li>
-          <li onMouseEnter={() => setIsHovered(false)}>
+          <li onMouseEnter={() => setIsHovered("Products")}>
             <NavLink
               className="navItem"
               activeClassName="active"
@@ -183,10 +188,7 @@ const Navbar = () => {
               Products
             </NavLink>
           </li>
-          <li
-            className="careers-nav-item"
-            onMouseEnter={() => setIsHovered(false)}
-          >
+          <li onMouseEnter={() => setIsHovered("Careers")}>
             <NavLink
               className="navItem"
               activeClassName="active"
@@ -194,24 +196,37 @@ const Navbar = () => {
               to="/careers"
             >
               Careers
-              <IoIosArrowUp className="up-icon" />
-              <IoIosArrowDown className="down-icon" />
+              {isHovered === "Careers" ? (
+                <IoIosArrowUp className="services-up-icon" />
+              ) : (
+                <IoIosArrowDown className="down-icon" />
+              )}
             </NavLink>
-            <div className="careers-hover-card-container">
-              <div className="careers-hover-card">
-                <div className="left-part">
-                  <Link to="/careers">
-                    <h2>
-                      Careers<span>.</span>
-                    </h2>
-                  </Link>
-                  <p>What is it like working at Work Momentum?</p>
-                </div>
-                <div className="right-part">
-                  <Link to="/job-opportunities">Job Opportunities</Link>
+            {isHovered === "Careers" && (
+              <div
+                className="careers-hover-card-container"
+                onMouseLeave={() => setIsHovered(null)}
+              >
+                <div className="careers-hover-card">
+                  <div className="left-part">
+                    <Link onClick={() => setIsHovered(null)} to="/careers">
+                      <h2>
+                        Careers<span>.</span>
+                      </h2>
+                    </Link>
+                    <p>What is it like working at Work Momentum?</p>
+                  </div>
+                  <div className="right-part">
+                    <Link
+                      onClick={() => setIsHovered(null)}
+                      to="/job-opportunities"
+                    >
+                      Job Opportunities
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </li>
           <li onMouseEnter={() => setIsHovered(false)}>
             <NavLink

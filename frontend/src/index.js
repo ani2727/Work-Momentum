@@ -10,6 +10,7 @@ import Contact from "./components/Contact/Contact";
 import ServiceDetails from "./components/Services/ServiceDetails";
 import Products from "./components/Products/Products";
 import Careers from "./components/Careers/Careers";
+import JobOpportunities from "./components/JobOpportunities.js/JobOpportunities";
 
 const appRouter = createBrowserRouter([
   {
@@ -41,8 +42,12 @@ const appRouter = createBrowserRouter([
         element: <Products />,
       },
       {
-        path:"/careers",
-        element: <Careers/>,
+        path: "/careers",
+        element: <Careers />,
+      },
+      {
+        path: "/job-opportunities",
+        element: <JobOpportunities />,
       },
     ],
   },
