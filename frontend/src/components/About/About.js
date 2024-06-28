@@ -6,7 +6,7 @@ const About = () => {
     <div className="aboutUsContainer">
       <div className="aboutUs-intro-img">
         <img
-          src="https://t4.ftcdn.net/jpg/05/17/23/17/360_F_517231746_4jBLlSwmrjOxWxfN0Xqg0TltdrsPNbFJ.jpg"
+          src="https://dg1xqmhtoint1.cloudfront.net/img/pgdm/blog/businessman-hand-holding-creative-light-bulb-with-marketing-network-icons-planning-strategy-pdgm.webp?mtime=20220506115838&focal=none"
           alt="background"
           className="aboutUs-image"
         />
@@ -103,16 +103,16 @@ const About = () => {
             </div>
             <h2>Industry level Expertise</h2>
             <p style={{fontSize:'20px'}}>
-              Numerous collaborations with SMCs and large businesses are a
-              testament to our capabilities. Whether you’re a growing company
-              seeking scalable solutions or an established corporation with
-              complex requirements, we’ve got you covered.
+            Industry-level expertise refers to a deep and comprehensive understanding 
+            of a specific industry, encompassing its trends, challenges, regulations, 
+            and best practices. It involves the ability to leverage this knowledge to make 
+            informed decisions, drive innovation, and maintain a competitive edge.
             </p>
           </div>
         </div>
       </div>
       <div className="about-members">
-        <h2 className="aboutus-heading">About Us</h2>
+        <h1 className="aboutus-heading">About Us</h1>
         <div className="member">
           <div className="member-image">
             <img src="abhilash1.png" alt="Abhilash" />
