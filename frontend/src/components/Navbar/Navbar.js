@@ -60,12 +60,14 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarContainer">
-        <Link onMouseEnter={() => setIsHovered(false)} to="/">
+        <Link className="logo-name-link" onMouseEnter={() => setIsHovered(false)} to="/">
+          <div className="logo-name">
           <img
-            src="logoworkmomentum.png"
-            alt="Work Momentum"
+            src="https://i.ibb.co/gFk50sH/Pi7-Image-Cropper.png"
+            alt="WorkMomentum"
             className="logo"
           />
+          </div>
         </Link>
         <ul className="navItems">
           <li onMouseEnter={() => setIsHovered(false)}>
@@ -121,7 +123,7 @@ const Navbar = () => {
                         {servicesData.engagementModels.map((item, index) => (
                           <li
                             key={index}
-                            onClick={() => handleNavigation(item.link)}
+                            // onClick={() => handleNavigation(item.link)}
                           >
                             <div className="flexRow">
                               <RiTeamFill className="popupItemsLogo" />
@@ -144,7 +146,7 @@ const Navbar = () => {
                         {servicesData.technologies.map((tech, index) => (
                           <li
                             key={index}
-                            onClick={() => handleNavigation(tech.link)}
+                            // onClick={() => handleNavigation(tech.link)}
                             className="technologies-content"
                           >
                             {tech.name}
@@ -206,7 +208,7 @@ const Navbar = () => {
                   <p>What is it like working at Work Momentum?</p>
                 </div>
                 <div className="right-part">
-                  <Link to="/job-opportunities">Job Opportunities</Link>
+                  <Link to="/careers">Job Opportunities</Link>
                 </div>
               </div>
             </div>

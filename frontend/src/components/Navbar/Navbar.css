@@ -1,6 +1,7 @@
 .navbar {
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 .navbarContainer {
@@ -14,10 +15,9 @@
 
 .logo {
   align-self: center;
-  width: 70px;
+  width: 120px;
   cursor: pointer;
 }
-
 .navItems {
   list-style: none;
   display: flex;
@@ -36,6 +36,7 @@
   padding: 0.5rem 0.75rem;
   transition: all 0.5s ease;
   box-sizing: border-box;
+  font-size: 1.1em;
 }
 
 .navItem:hover {
@@ -92,11 +93,13 @@
   text-decoration: none;
   color: inherit;
   font-size: 1.2rem;
+  color: rgb(74, 120, 236);
 }
 
 .contentSection {
   text-align: left;
   margin-left: 2.5em;
+  font-weight: 100;
 }
 
 .services-link {
@@ -125,7 +128,7 @@
 
 .popupSection h3 {
   margin: 1em 0;
-  color: rgb(96, 140, 250);
+  color:rgb(74, 120, 236);
   text-align: left;
 }
 
@@ -159,9 +162,9 @@
   font-size: 1em;
 }
 
-.popupItemsHeading:hover {
+/* .popupItemsHeading:hover {
   text-decoration: underline;
-}
+} */
 
 .popupItemsPara {
   color: rgb(113, 112, 112);
@@ -187,9 +190,9 @@
   font-weight: 400;
 }
 
-.technologies-content:hover {
+/* .technologies-content:hover {
   text-decoration: underline;
-}
+} */
 
 .solutions-content {
   font-size: 0.9em;

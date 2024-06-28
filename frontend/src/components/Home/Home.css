@@ -1,7 +1,7 @@
-.home {
-  margin: 6em 0em;
-  
+.home{
+  margin: 5.6em 0em;
 }
+
 .home-header {
   display: flex;
   justify-content: space-between;
@@ -9,26 +9,23 @@
   background-image: url("https://business.libertymutual.com/wp-content/uploads/2021/03/L1_Solutions_Header_1440-x-520.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 30em;
-  margin-top: -1em;
+  height: 35em;
 }
 
 .home-body-text {
-  width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
-  margin: 1em;
-  backdrop-filter: blur(5px);
   height: 30em;
   padding: 2em;
   margin-left: -0.5em;
 }
 .home-body-text h1 {
-  font-size: 3em;
+  margin-top: 0.6em;
+  font-size: 4em;
 }
 .home-body-text p {
-  margin-top: 1em;
-  font-size: 1em;
+  font-size: 1.4em;
 }
 
 .home-body-text button {
@@ -43,6 +40,7 @@
   border-radius: 0.5em;
   cursor: pointer;
   transition: 0.3s;
+  font-size: 1.1em;
 }
 .home-body-text button:hover {
   background-color: rgb(34, 34, 204);
@@ -52,4 +50,21 @@
 }
 .home-body-img img {
   width: 110%;
+}
+
+.home-products-header{
+  font-size: 3.4em;
+  margin:0em 1.2em;
+  margin-top: 1em;
+
+}
+.productsHeadingHrLine {
+  background-color: rgb(105, 172, 254);
+  width: 4em;
+  height: 0.15em;
+  border: none;
+  margin: 0em 4.5em;
+}
+.home-products{
+  margin-top:-4em;
 }

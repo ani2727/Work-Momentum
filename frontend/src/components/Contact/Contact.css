@@ -19,6 +19,7 @@
   }
   .contact-data h1{
     margin-bottom: 1em;
+    font-size: 2.5em;
   }
   
   .Email {
@@ -29,13 +30,14 @@
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    font-size: 1.3em;
   }
   
   .Email input[type='text'],
   .Email input[type='email'] {
     width: calc(100% - 0px); /* Adjust input width minus padding */
     padding: 8px;
-    font-size: 18px;
+    font-size: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box; /* Ensures padding is included in width */
@@ -53,7 +55,7 @@
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
   }
   

@@ -16,10 +16,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    transition: 0.3s;
+    transition: 0.6s;
 }
 .stat-card h1{
-    font-size: 2rem;
+    font-size: 3rem;
     color: rgb(60,60,224);
 }
 .stat-card p{
@@ -28,34 +28,36 @@
 .stat-header{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 .stat-header img{
-    width: 20%;
+    width: 60px;
+    border-radius: 50%;
 }
+
 .stat-card:hover, .stat-card-tech:hover{
         transform: scale(1.15);
-        cursor: pointer;
 }
 
 .tech h1{
-    font-size: 1em;
+    font-size: 1.4em;
     color: rgb(15,15,92);
 }
 .stat-card-tech {
     box-shadow: 0.1em -0.1em 0.2em 0.1em rgb(209, 202, 202);
-    height: 7em;
+    height: 8em;
     width: 15em;
     border-radius: 0.5em;
     font-weight: bold;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    transition: 0.3s;
+    transition: 0.5s;
     padding: 1em;
     margin: 1em;
-
+    flex-direction: column;
 }
+
 .stat-card-tech p{
-    font-size: 0.89em;
+    font-size: 1em;
 }

@@ -1,22 +1,32 @@
-/* Animate.css CDN import */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
-/* General styling for the products section */
-.products {
-    margin: 6em 5em;
-    text-align: center;
+.products-banner-image{
+    background-image: url("https://t3.ftcdn.net/jpg/05/22/18/66/360_F_522186651_sjPyyCdVMZslnyIaM7HFRB2XQP22pFp2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+    margin: 5em 0em;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: left;
     padding: 2em;
+}
+
+.products {
+    text-align: center;
     border-radius: 1em;
     scroll-behavior: smooth;
 }
 
+
 .products-header {
-    animation: fadeIn 2s ease-in-out;
+    font-size: 1.2em;
+    color: white;
 }
 
 .products-header h1 {
-    font-size: 3em;
-    animation: pulse 2s infinite;
+    font-size: 3.3em;
     transition: color 0.3s ease;
 }
 
@@ -24,14 +34,23 @@
     transition: color 0.3s ease;
 }
 
-.products-header h1:hover, .products-header h2:hover {
-    color: rgb(38, 38, 211);
+.products-offer-card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.products-offer-card-header img{
+    width: 70px;
+    border-radius: 1em;
+    padding: 0em 1em;
 }
 
 .products-description {
     margin-top: 2em;
     font-size: 1.2em;
     animation: slideIn 1.5s ease-out;
+    color: white;
+    width: 45%;
 }
 
 .products-offer {
@@ -66,17 +85,15 @@
 }
 
 .products-offer-card h2 {
-    font-size: 1.5em;
     margin-bottom: 10px;
+    font-size: 2em;
 }
 
 .products-offer-card p {
     color: #464343;
-    font-size: 1em;
 }
 
 .products-offer-card:hover {
-    cursor: pointer;
     transform: scale(1.1);
     box-shadow: 0.3em 0.3em 0.5em rgb(100, 100, 255);
     transform: translateY(-10px);
@@ -87,7 +104,6 @@
     margin: 1em;
 }
 
-/* Custom animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -110,7 +126,6 @@
     100% { transform: scale(1); }
 }
 
-/* Animate.css animations */
 .animate__animated {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -144,66 +159,65 @@
 }
 
 
-/* Import Animate.css */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
 
-/* Navbar styling */
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+
+.tech-stack h1{
+    font-size: 2.4em;
 }
 
-/* General styling */
+
 .why-devops {
-    margin: 3em 5em 6em; /* Adjust top margin to account for navbar height */
+    margin: 3em 5em 6em;
     text-align: center;
     padding: 2em;
     border-radius: 1em;
     background: #f9f9f9;
 }
 
+.why-devops-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.why-devops-header img{
+    width: 80px;
+    border-radius: 50%;
+}
 .why-devops h1 {
-    font-size: 2.5em;
+    font-size: 2.8em;
     margin-bottom: 1em;
 }
 
 .why-devops-card {
     margin: 1em;
     padding: 2em;
-    background: #fff;
+    background: white;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: inline-block;
     width: calc(50% - 2em);
-    vertical-align: top;
     text-align: left;
 }
 
 .why-devops-card h3 {
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin-bottom: 0.5em;
     color: rgb(15, 15, 92);
 }
 
 .why-devops-card p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #666;
 }
 
-/* Add hover effect */
 .why-devops-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Custom animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -226,7 +240,6 @@
     100% { transform: scale(1); }
 }
 
-/* Animate.css animations */
 .animate__animated {
     animation-duration: 1s;
     animation-fill-mode: both;
@@ -264,13 +277,45 @@
 }
 
 .devops-desc {
-    margin: 2em 4em;
-    text-align: center;
-    padding: 2em;
+    display: flex;
     background: #fff;
     border-radius: 1em;
     box-shadow: 0 -1px 2px 4px rgba(12, 12, 12, 0.1);
     animation-duration: 1s;
     animation-fill-mode: both;
-    font-size: 1.2em;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5em;
+    margin-top: -3em;
+    margin: 4em;
+}
+.devops-desc img{
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+.devops-desc button{
+    background: rgb(55, 55, 224);
+    color: white;
+    border: none;
+    padding: 0.4em 1.5em;
+    outline: none;
+    border-radius: 0.3em;
+    font-size: 1em;
+    transition: 0.4s;
+    margin: 1em 0em;
+}
+.devops-desc button:hover{
+    background: rgb(31, 31, 194);
+    cursor: pointer;
+}
+.devops-desc-text{
+    text-align: left;
+    color: #272626;
+    font-size: 1.3em;
+    padding: 1.5em;
+}
+.devops-desc-text h1{
+    color: black;
+
 }
