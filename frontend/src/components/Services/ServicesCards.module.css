@@ -41,7 +41,7 @@ ul {
   border-radius: 1em;
   list-style-type: none;
   margin: 2em 0;
-  box-shadow: gray 0.05em 0.05em 0.05em 0.1em;
+  box-shadow: gray 0.05em 0.02em 0.1em 0.02em;
   outline: none;
   overflow: hidden;
   color: rgb(36, 36, 36);
