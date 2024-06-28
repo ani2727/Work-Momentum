@@ -128,7 +128,7 @@
 
 .popupSection h3 {
   margin: 1em 0;
-  color:rgb(74, 120, 236);
+  color: rgb(74, 120, 236);
   text-align: left;
 }
 
@@ -173,17 +173,6 @@
   font-weight: 500;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .technologies-content {
   font-size: 0.9em;
   text-align: left;
@@ -218,10 +207,6 @@
   border: none;
 }
 
-.careers-nav-item {
-  position: relative;
-}
-
 .down-icon {
   margin: auto 10px;
 }
@@ -243,20 +228,19 @@
   display: inline;
 }
 
-.careers-nav-item:hover .careers-hover-card-container {
-  display: block;
-}
 .careers-hover-card-container {
-  display: none;
-  position: absolute;
-  background-color: white;
-  top: 2em;
-  right: -12em;
   width: max-content;
   padding: 30px 20px;
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   color: #000;
+  position: absolute;
+  top: 100%;
+  right: 15rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .careers-hover-card {
@@ -287,4 +271,15 @@
 
 .careers-hover-card .right-part {
   padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
