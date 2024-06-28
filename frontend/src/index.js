@@ -10,7 +10,7 @@ import Contact from "./components/Contact/Contact";
 import ServiceDetails from "./components/Services/ServiceDetails";
 import Products from "./components/Products/Products";
 import Careers from "./components/Careers/Careers";
-import JobOpportunities from "./components/JobOpportunities.js/JobOpportunities";
+import JobOpportunities from "./components/JobOpportunities/JobOpportunities";
 
 const appRouter = createBrowserRouter([
   {
