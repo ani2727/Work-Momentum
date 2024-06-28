@@ -1,6 +1,7 @@
 .stat-cards{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     text-align: center;
     justify-content: center;
 }
@@ -18,11 +19,11 @@
     transition: 0.3s;
 }
 .stat-card h1{
-    font-size: 1rem;
+    font-size: 3rem;
     color: rgb(60,60,224);
 }
 .stat-card p{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 .stat-header{
     display: flex;
@@ -32,7 +33,30 @@
 .stat-header img{
     width: 20%;
 }
-.stat-card:hover{
+
+.stat-card:hover, .stat-card-tech:hover{
         transform: scale(1.15);
         cursor: pointer;
+}
+
+.tech h1{
+    font-size: 1.4em;
+    color: rgb(15,15,92);
+}
+.stat-card-tech {
+    box-shadow: 0.1em -0.1em 0.2em 0.1em rgb(209, 202, 202);
+    height: 7em;
+    width: 15em;
+    border-radius: 0.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    transition: 0.3s;
+    padding: 1em;
+    margin: 1em;
+    flex-direction: column;
+}
+.stat-card-tech p{
+    font-size: 1em;
 }

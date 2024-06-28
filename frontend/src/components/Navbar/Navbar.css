@@ -14,7 +14,7 @@
 
 .logo {
   align-self: center;
-  width: 70px;
+  width: 100px;
   cursor: pointer;
 }
 
@@ -36,6 +36,7 @@
   padding: 0.5rem 0.75rem;
   transition: all 0.5s ease;
   box-sizing: border-box;
+  font-size: 1.1em;
 }
 
 .navItem:hover {
@@ -62,23 +63,41 @@
   border: 1px solid #ddd;
   z-index: 1000;
   display: flex;
-  flex-direction: column; /* Ensure popup container is a column layout */
+  flex-direction: column;
   padding: 2em;
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.firstContainer {
-  display: flex;
-  margin-bottom: 1em;
-  align-items: center;
-}
-
-.firstContainer div {
+.popup {
   display: flex;
   flex-direction: column;
-  align-self: flex-start;
-  margin-left: 1em;
-  width: 50%;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.firstContainerLogo {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.services-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+}
+
+.contentSection {
+  text-align: left;
+  margin-left: 2.5em;
 }
 
 .services-link {
@@ -93,12 +112,12 @@
 
 .popupRow {
   display: flex;
-  flex-wrap: wrap; /* Allow popup sections to wrap to next line if necessary */
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .popupSection {
-  flex: 1; /* Each popup section takes equal space */
-  margin-right: 2em;
+  margin-right: 4em;
 }
 
 .firstContainer p {
@@ -108,7 +127,7 @@
 .popupSection h3 {
   margin: 1em 0;
   color: rgb(96, 140, 250);
-  text-align: center;
+  text-align: left;
 }
 
 .popupSection ul {
@@ -141,14 +160,15 @@
   font-size: 1em;
 }
 
-.popupItemsHeading:hover {
+/* .popupItemsHeading:hover {
   text-decoration: underline;
-}
+} */
 
 .popupItemsPara {
-  color: rgb(140, 138, 138);
+  color: rgb(113, 112, 112);
   font-size: 0.8em;
   text-align: left;
+  font-weight: 500;
 }
 
 @keyframes fadeIn {
@@ -164,14 +184,18 @@
 
 .technologies-content {
   font-size: 0.9em;
+  text-align: left;
+  font-weight: 400;
 }
 
-.technologies-content:hover {
+/* .technologies-content:hover {
   text-decoration: underline;
-}
+} */
 
 .solutions-content {
   font-size: 0.9em;
+  text-align: left;
+  font-weight: 500;
 }
 
 .solutions-content:hover {
@@ -190,4 +214,75 @@
   background-color: blue;
   border-radius: 0.3em;
   border: none;
+}
+
+.careers-nav-item {
+  position: relative;
+}
+
+.down-icon {
+  margin: auto 10px;
+}
+
+.up-icon {
+  margin: auto 10px;
+  display: none;
+}
+
+.services-up-icon {
+  margin: auto 10px;
+}
+
+.careers-nav-item:hover .down-icon {
+  display: none;
+}
+
+.careers-nav-item:hover .up-icon {
+  display: inline;
+}
+
+.careers-nav-item:hover .careers-hover-card-container {
+  display: block;
+}
+.careers-hover-card-container {
+  display: none;
+  position: absolute;
+  background-color: white;
+  top: 2em;
+  right: -12em;
+  width: max-content;
+  padding: 30px 20px;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: #000;
+}
+
+.careers-hover-card {
+  display: flex;
+  width: max-content;
+}
+.careers-hover-card .left-part {
+  padding: 20px;
+  border-right: 1px solid black;
+}
+.careers-hover-card a {
+  text-decoration: none;
+  color: #000;
+}
+.careers-hover-card .left-part h2 {
+  font-size: 1.5rem;
+  color: #000;
+}
+.careers-hover-card .left-part h2 span {
+  margin-left: 2px;
+  font-size: 1.5rem;
+  color: rgb(47, 47, 243);
+}
+.careers-hover-card .left-part p {
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.careers-hover-card .right-part {
+  padding: 20px;
 }

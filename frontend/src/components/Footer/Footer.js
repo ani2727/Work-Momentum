@@ -16,8 +16,8 @@ function Footer() {
         <div className={styles.logoIcons}>
           <div className={styles.logoContainer}>
             <img
-              src="/abhiTrainings-logo-white.png"
-              alt="WM LOGO"
+              src="https://i.ibb.co/gFk50sH/Pi7-Image-Cropper.png"
+              alt="WMLOGO"
               className={styles.logo}
             />
           </div>
@@ -75,7 +75,9 @@ function Footer() {
           <h3>Subscribe</h3>
           <form>
             <div className={styles.emailInputContainer}>
-              <MdEmail className={styles.emailIcon} />
+            <a href="mailto:abhitrainings@gmail.com" className={styles.emailIcon}>
+              <MdEmail />
+            </a>
               <input
                 type="email"
                 placeholder="Your email"
@@ -89,8 +91,8 @@ function Footer() {
         </div>
         <div className={styles.helpCenter}>
           <h3>Help Center</h3>
-          <p><FaPhoneAlt className={styles.contactIcon} /> +91 9876543210</p>
-          <p><MdEmail className={styles.contactIcon} /> abhitrainings@gmail.com</p>
+          <p><FaPhoneAlt className={styles.contactIcon} /> +91 9705501016</p>
+          <p><MdEmail className={styles.contactIcon} /> abhilash.sandupatla@workmomentum.com</p>
           <p><MdHome className={styles.homeIcon} /> Madhapur, Hyderabad.</p>
         </div>
       </div>

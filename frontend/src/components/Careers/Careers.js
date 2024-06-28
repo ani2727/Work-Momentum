@@ -20,7 +20,7 @@ const Careers = () => {
             are a remote-first company that connects you to global
             opportunities.
           </h3>
-          <NavLink to="/job-oppurtunities">
+          <NavLink to="/contact-us">
             <button className="explore-jobs-button">
               Explore Job Opportunities
               <FaArrowRightLong className="arrow-icon" />
@@ -36,7 +36,7 @@ const Careers = () => {
         </div>
       </section>
       <section className="careers-mid-section">
-        <h1>Why Work Momentum?</h1>
+        <h1>Why WorkMomentum?</h1>
         <p>
           Join a company where new ideas are always welcome. Together, let’s
           drive innovation and redefine the tech landscape.
@@ -170,7 +170,7 @@ const Careers = () => {
             always looking for top talent!
           </p>
 
-          <Link to="/job-opportunities">
+          <Link to="/contact-us">
             <button>Send an Open Application</button>
           </Link>
         </div>

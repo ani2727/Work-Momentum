@@ -3,6 +3,7 @@ import { NavLink, useNavigate, Link } from "react-router-dom";
 import "./Navbar.css";
 import { RiTeamFill } from "react-icons/ri";
 import { SiEsotericsoftware } from "react-icons/si";
+import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
 
 const servicesData = {
   engagementModels: [
@@ -59,12 +60,14 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="navbarContainer">
-        <Link to="/">
+        <Link className="logo-name-link" onMouseEnter={() => setIsHovered(false)} to="/">
+          <div className="logo-name">
           <img
-            src="logoworkmomentum.png"
+            src="https://i.ibb.co/gFk50sH/Pi7-Image-Cropper.png"
             alt="Work Momentum"
             className="logo"
           />
+          </div>
         </Link>
         <ul className="navItems">
           <li onMouseEnter={() => setIsHovered(false)}>
@@ -78,6 +81,11 @@ const Navbar = () => {
             activeClassName="active"
           >
             Services
+            {isHovered ? (
+              <IoIosArrowUp className="services-up-icon" />
+            ) : (
+              <IoIosArrowDown className="down-icon" />
+            )}
             {isHovered && (
               <div
                 className="popupContainer"
@@ -85,8 +93,8 @@ const Navbar = () => {
               >
                 <div className="popup">
                   <div className="firstContainer">
-                    <SiEsotericsoftware />
-                    <div>
+                    <div className="headerSection">
+                      <SiEsotericsoftware className="firstContainerLogo" />
                       <NavLink
                         exact
                         to="/services"
@@ -95,20 +103,27 @@ const Navbar = () => {
                       >
                         Software Development Services
                       </NavLink>
+                    </div>
+                    <div className="contentSection">
                       <p>
                         Boost your tech projects with outsourced development.
+                      </p>
+                      <p>
                         Custom engagement models designed to fit your needs.
                       </p>
                     </div>
                   </div>
+
                   <div className="popupRow">
                     <div className="popupSection">
-                      <h3>Engagement models.</h3>
+                      <h3 className="popupSectionHeading">
+                        Engagement models.
+                      </h3>
                       <ul>
                         {servicesData.engagementModels.map((item, index) => (
                           <li
                             key={index}
-                            onClick={() => handleNavigation(item.link)}
+                            // onClick={() => handleNavigation(item.link)}
                           >
                             <div className="flexRow">
                               <RiTeamFill className="popupItemsLogo" />
@@ -131,7 +146,7 @@ const Navbar = () => {
                         {servicesData.technologies.map((tech, index) => (
                           <li
                             key={index}
-                            onClick={() => handleNavigation(tech.link)}
+                            // onClick={() => handleNavigation(tech.link)}
                             className="technologies-content"
                           >
                             {tech.name}
@@ -168,7 +183,10 @@ const Navbar = () => {
               Products
             </NavLink>
           </li>
-          <li onMouseEnter={() => setIsHovered(false)}>
+          <li
+            className="careers-nav-item"
+            onMouseEnter={() => setIsHovered(false)}
+          >
             <NavLink
               className="navItem"
               activeClassName="active"
@@ -176,7 +194,24 @@ const Navbar = () => {
               to="/careers"
             >
               Careers
+              <IoIosArrowUp className="up-icon" />
+              <IoIosArrowDown className="down-icon" />
             </NavLink>
+            <div className="careers-hover-card-container">
+              <div className="careers-hover-card">
+                <div className="left-part">
+                  <Link to="/careers">
+                    <h2>
+                      Careers<span>.</span>
+                    </h2>
+                  </Link>
+                  <p>What is it like working at Work Momentum?</p>
+                </div>
+                <div className="right-part">
+                  <Link to="/job-opportunities">Job Opportunities</Link>
+                </div>
+              </div>
+            </div>
           </li>
           <li onMouseEnter={() => setIsHovered(false)}>
             <NavLink
