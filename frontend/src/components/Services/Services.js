@@ -34,45 +34,7 @@ import { MdReadMore } from "react-icons/md";
 
 import ServicesCards from "./ServicesCards";
 import { Link } from "react-router-dom";
-
-const servicesData = [
-  {
-    icon: "Code",
-    title: "Custom Software Development",
-    description:
-      "Create tailored software solutions that meet specific business needs, incorporating both front-end and back-end technologies.",
-  },
-  {
-    icon: "Mobile",
-    title: "Mobile App Development",
-    description:
-      "Develop high-performance, secure mobile applications for both iOS and Android platforms.",
-  },
-  {
-    icon: "CheckCircle",
-    title: "QA and Testing",
-    description:
-      "Guarantee the robustness and reliability of technology products through comprehensive manual and automated QA processes.",
-  },
-  {
-    icon: "Brain",
-    title: "AI and Data Science",
-    description:
-      "Leverage AI and data science to uncover insights, drive decisions, and develop intelligent solutions using advanced data engineering principles.",
-  },
-  {
-    icon: "PaintBrush",
-    title: "UX/UI Design",
-    description:
-      "Design intuitive and engaging user experiences for websites and mobile applications, focusing on usability and aesthetics.",
-  },
-  {
-    icon: "Server",
-    title: "Platform and Infrastructure",
-    description:
-      "Ensure scalable and resilient applications with robust platform and infrastructure solutions, including cybersecurity and DevOps practices.",
-  },
-];
+import SoftwareDevelopmentCards from "./SoftwareDevelopmentCards";
 
 const Services = () => {
   return (
@@ -102,19 +64,7 @@ const Services = () => {
         <h1 className={styles.servicesHeaderContainerHeading}>
           From Concept To Completion.
         </h1>
-        <div className={styles.services}>
-          {servicesData.map((service, index) => (
-            <div className={styles.serviceItem} key={index}>
-              <div
-                className={`${styles.serviceIcon} ${
-                  styles[`serviceIcon${service.icon}`]
-                }`}
-              ></div>
-              <h3 className={styles.title}>{service.title}</h3>
-              <p className={styles.description}>{service.description}</p>
-            </div>
-          ))}
-        </div>
+        <SoftwareDevelopmentCards />
       </div>
       <div className={styles.techStackContainer}>
         <div className={styles.stackDescription}>

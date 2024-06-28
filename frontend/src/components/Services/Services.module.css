@@ -72,68 +72,6 @@
   }
 }
 
-.services {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
-
-.serviceItem {
-  flex: 1 1 calc(33.333% - 40px);
-  margin: 10px;
-  padding: 20px;
-  text-align: start;
-  transition: transform 0.2s ease-in-out;
-}
-
-.serviceItem:hover {
-  transform: translateY(-5px);
-}
-
-.serviceIcon {
-  font-size: 40px;
-  margin-bottom: 15px;
-  color: #ff6347;
-}
-
-.serviceIconCode::before {
-  content: "🔧";
-}
-
-.serviceIconMobile::before {
-  content: "📱";
-}
-
-.serviceIconCheckCircle::before {
-  content: "✔️";
-}
-
-.serviceIconBrain::before {
-  content: "🧠";
-}
-
-.serviceIconPaintBrush::before {
-  content: "🎨";
-}
-
-.serviceIconServer::before {
-  content: "💻";
-}
-
-.title {
-  color: #333;
-  font-size: 1.25em;
-  margin: 10px 0;
-}
-
-.description {
-  color: #666;
-  font-size: 1em;
-  margin: 0;
-}
-
 .FooterContainer {
   display: flex;
   align-items: center;
