@@ -31,7 +31,10 @@ const ServiceDetailsContent = ({ details }) => {
     <ul className={`${styles.servicesWeOfferedConaitner} fade-in`}>
       {details.map((eachItem, index) => (
         <li key={index} className={styles.serviceOfferdItem}>
-          <h1 className={styles.serviceOfferdItemHeading}>{eachItem.name}</h1>
+          <div className={styles.servicesOfferHeader}>
+            <h1 className={styles.serviceOfferdItemHeading}>{eachItem.name}</h1>
+            <img src={eachItem.imageUrl} alt="" />
+          </div>
           <p className={styles.serviceOfferdItemDescription}>
             {eachItem.description}
           </p>

@@ -2,6 +2,7 @@
 
 .products-banner-image {
   background-image: url("https://t3.ftcdn.net/jpg/05/22/18/66/360_F_522186651_sjPyyCdVMZslnyIaM7HFRB2XQP22pFp2.jpg");
+  /* background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20230322/pngtree-the-devops-software-development-it-concept-devops-software-development-it-concept-photo-image_2078003.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
   height: 30em;
@@ -46,7 +47,7 @@
 
 .products-description {
   margin-top: 2em;
-  font-size: 1.2em;
+  font-size: 1.3em;
   animation: slideIn 1.5s ease-out;
   color: white;
   width: 45%;
@@ -74,13 +75,12 @@
   transition: 0.3s;
   outline: none;
   border: none;
-  background: transparent;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  background: #fff;
   border: 1px solid #e0e0e0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  background: blue;
 }
 
 .products-offer-card h2 {
@@ -200,7 +200,7 @@
 .why-devops-card {
   margin: 1em;
   padding: 2em;
-  background: white;
+  background: rgb(185, 214, 230);
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -218,7 +218,7 @@
 
 .why-devops-card p {
   font-size: 1.1em;
-  color: #666;
+  color: #3f3a3a;
 }
 
 .why-devops-card:hover {
@@ -298,18 +298,17 @@
   display: flex;
   background: #fff;
   border-radius: 1em;
-  box-shadow: 0 -1px 2px 4px rgba(12, 12, 12, 0.1);
+  /* box-shadow: 0 -1px 2px 4px rgba(12, 12, 12, 0.1); */
   animation-duration: 1s;
   animation-fill-mode: both;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.5em;
-  margin-top: -3em;
-  margin: 4em;
+  margin:0.5em 4em;
 }
 .devops-desc img {
-  border-top-right-radius: 1em;
-  border-bottom-right-radius: 1em;
+  border-radius: 1em;
+  width: 100%;
 }
 
 .devops-desc button {

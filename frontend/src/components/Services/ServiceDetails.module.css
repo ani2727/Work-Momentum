@@ -4,6 +4,7 @@
 
 .serviceHeaderContainer {
   display: flex;
+  align-items: center;
 }
 
 .servicesImageContainer {
@@ -29,8 +30,18 @@
   flex-direction: column;
   justify-content: center;
   padding: 2em;
-  width: 50%;
+  width: 80%;
   font-size: 1.1em;
+}
+
+.servicesOfferHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.servicesOfferHeader img{
+    width: 100px;
+    border-radius: 2em;
 }
 
 .serviceProductDetailsHeading {

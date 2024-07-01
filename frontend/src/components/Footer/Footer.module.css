@@ -1,5 +1,5 @@
 .footerContainer {
-  background: linear-gradient(to top, rgb(56, 46, 46), rgb(92, 72, 72));
+  background: black;
   margin-top: auto;
   padding: 20px 0;
   display: flex;
@@ -25,7 +25,7 @@
   align-items: center;
 }
 .logoContainer img {
-  width: 200px;
+  width: 150px;
   height: 100px;
 }
 
