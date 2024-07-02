@@ -1,5 +1,4 @@
 import "./Products.css"
-import {Link} from "react-router-dom"
 import StatisticsTechStack from "../Statistics/StatisticsTechStack";
 const Products = ()=>{
     return (
@@ -10,9 +9,9 @@ const Products = ()=>{
                     <h2>Your seamless devops Ecosystem</h2>
                 </div>
                 <div className='products-description'>
-                    Welcome to One Click DevOps, the ultimate solution for all your DevOps needs. 
-                    Our product is designed to streamline your entire development and deployment 
-                    process, ensuring rapid and efficient delivery of your software projects. 
+                    Experience the future of DevOps with One Click DevOps, 
+                    where deploying your applications is as simple as a single click. 
+                    Get started today and transform your development workflow!
                 </div>
             </div>
             <div>
@@ -43,7 +42,7 @@ const Products = ()=>{
                 </div>
             </div>
             <div className='tech-stack'>
-                <h1>Our Technology Stack</h1>
+                <h1>Our DevOps Technology Stack</h1>
                 <StatisticsTechStack/>
             </div>
             <div className="why-devops">
@@ -86,12 +85,7 @@ const Products = ()=>{
             </div>
 
             <div className="devops-desc animate__animated animate__fadeInUp animate__delay-5s">
-                <div className="devops-desc-text">
-                    <h1>Effortless DevOps</h1>
-                    <p>Experience the future of DevOps with One Click DevOps, where deploying your applications is as simple as a single click. Get started today and transform your development workflow!</p>
-                    <Link to='/contact-us'><button>Let's Connect</button></Link>
-                </div>
-                <img src='https://png.pngtree.com/thumb_back/fh260/background/20230322/pngtree-the-devops-software-development-it-concept-devops-software-development-it-concept-photo-image_2078003.jpg' alt=''/>
+                {/* <img src='https://png.pngtree.com/thumb_back/fh260/background/20230322/pngtree-the-devops-software-development-it-concept-devops-software-development-it-concept-photo-image_2078003.jpg' alt=''/> */}
             </div>
         </div>
     )

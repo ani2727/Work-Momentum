@@ -1,7 +1,6 @@
 import React from "react";
 import HomeHeader from "./HomeHeader";
 import Products from "../Products/Products";
-import Careers from "../Careers/Careers";
 import About from "../About/About";
 import "./Home.css";
 import SoftwareDevelopmentCards from "../Services/SoftwareDevelopmentCards";
@@ -15,7 +14,7 @@ const Home = () => {
         <hr className="servicesHeadingHrLine" />
         <p className="servicesDescription">
           Work Momentum is a software company that delivers services based on
-          user requests. They provide end-to-end software development services,
+          user requests. We provide end-to-end software development services,
           ranging from consultancy and ideation of your ideas and product
           strategy to designing UX/UI mockups, development, testing, launch,
           support, and maintenance. Work Momentum is a long-term partner you can
@@ -29,7 +28,6 @@ const Home = () => {
         <Products />
       </div>
 
-      <Careers />
       <About />
     </div>
   );

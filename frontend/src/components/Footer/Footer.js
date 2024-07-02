@@ -16,7 +16,7 @@ function Footer() {
         <div className={styles.logoIcons}>
           <div className={styles.logoContainer}>
             <img
-              src="https://i.ibb.co/gFk50sH/Pi7-Image-Cropper.png"
+              src="https://i.postimg.cc/vH8HKbt3/Work-Momentum-1-1.png"
               alt="WMLOGO"
               className={styles.logo}
             />

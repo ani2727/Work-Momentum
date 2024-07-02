@@ -56,6 +56,9 @@
     padding: 1em;
     margin: 1em;
     flex-direction: column;
+    background-image: url("https://www.shutterstock.com/image-illustration/abstract-bubbles-colorfully-blurred-canvas-600nw-2372127655.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .stat-card-tech p{

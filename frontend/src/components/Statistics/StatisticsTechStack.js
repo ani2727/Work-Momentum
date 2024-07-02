@@ -6,7 +6,7 @@ const StatisticsTechStack = ()=>{
             <div className="stat-card-tech">
                 <div className="stat-header tech">
                     <h1>CI/CD Tools</h1>
-                    <img src='https://mlops-guide.github.io/MLOps/CICDML/ci-cd.png' alt='fav' />
+                    <img src='https://images.prismic.io/hatica/271b0e2b-7a81-4421-b1fa-9d84715bc3fe_Top+10+CI+Pipeline+Tools.png?auto=compress,format&rect=0,0,1801,1151&w=1200&h=767' alt='fav' />
                 </div>
                 <p>Jenkins, GitLab</p>
             </div>
@@ -34,7 +34,7 @@ const StatisticsTechStack = ()=>{
             <div className="stat-card-tech">
                 <div className="stat-header tech">
                     <h1>Continuous Deployment</h1>
-                    <img src='https://cdn-blog.lawrencemcdaniel.com/wp-content/uploads/2022/04/10093135/github-actions-logo-1030x579.webp' alt='fav' />
+                    <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPErc5xtnCxLch-6xpDxz4k6bXr_zl3h7isFrtrj4CSuL0fL_lTS-Jax-2O5ruDYgvvYk&usqp=CAU' alt='fav' />
                 </div>
                 <p>ArgoCD</p>
             </div>
