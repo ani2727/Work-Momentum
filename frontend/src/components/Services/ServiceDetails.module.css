@@ -34,14 +34,14 @@
   font-size: 1.1em;
 }
 
-.servicesOfferHeader{
+.servicesOfferHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.servicesOfferHeader img{
-    width: 100px;
-    border-radius: 2em;
+.servicesOfferHeader img {
+  width: 60px;
+  border-radius: 2em;
 }
 
 .serviceProductDetailsHeading {
