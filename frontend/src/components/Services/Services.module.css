@@ -1,7 +1,7 @@
 .servicesHeaderContainer {
   background-image: url("https://powell-software.com/wp-content/uploads/2021/08/Human-Resources-Employee-Experience-Platform-1.png");
-  background-size: cover; /* Cover the entire container */
-  background-position: center; /* Center the background image */
+  background-size: cover;
+  background-position: center;
   height: 20vh;
   width: 100%;
   display: flex;
@@ -41,33 +41,39 @@
   text-decoration: none;
 }
 
-@media screen and (max-width: 468px) {
-  .servicesHeaderContainerHeading {
-    font-size: 0.5em;
-  }
-  .servicesHeaderContainerDescription {
-    font-size: 0.5em;
-    margin-right: 2em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .servicesHeaderContainerHeading {
-    font-size: 1em;
-  }
-  .servicesHeaderContainerDescription {
-    font-size: 0.7em;
-    margin-right: 2em;
-  }
-}
-
 @media screen and (max-width: 1000px) {
+  .servicesHeaderContainer {
+    height: 10vh;
+  }
   .servicesHeaderContainerHeading {
     font-size: 2em;
   }
 
   .servicesHeaderContainerDescription {
     font-size: 1em;
+    margin-right: 2em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .servicesHeaderContainerHeading {
+    font-size: 1.2em;
+  }
+  .servicesHeaderContainerDescription {
+    font-size: 0.8em;
+    margin-right: 2em;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  /* .servicesHeaderContainer {
+    background-image: none;
+  } */
+  .servicesHeaderContainerHeading {
+    font-size: 0.8em;
+  }
+  .servicesHeaderContainerDescription {
+    font-size: 0.5em;
     margin-right: 2em;
   }
 }
@@ -179,7 +185,7 @@
   grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
   gap: 1em;
   width: 100%;
-  max-width: 1200px;
+  max-width: 90%;
 }
 
 .stackItem {
@@ -215,6 +221,12 @@
   height: 3em;
 }
 
+.servicesContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 5em 5em;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .techStackContainer {
@@ -239,6 +251,10 @@
 
   .icon {
     font-size: 2em;
+  }
+
+  .servicesContainer {
+    margin: 2em 2em;
   }
 }
 
@@ -270,10 +286,8 @@
   .stackItem span {
     font-size: 0.8em;
   }
-}
 
-.servicesContainer {
-  display: flex;
-  flex-direction: column;
-  margin: 5em 5em;
+  .servicesContainer {
+    margin: 1em 1em;
+  }
 }

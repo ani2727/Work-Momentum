@@ -59,7 +59,10 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
+  .serviceDetailsContainer {
+    margin: 8em 2em;
+  }
   .serviceHeaderContainer {
     flex-direction: column;
   }
@@ -92,6 +95,35 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .serviceProductDetailsHeading {
+    font-size: 1em;
+  }
+
+  .serviceProductDetailsDescription {
+    font-size: 0.7em;
+    margin-bottom: 1em;
+  }
+
+  .serviceProductDetailsButton {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .serviceProductDetailsHeading {
+    font-size: 1.9em;
+  }
+  .serviceProductDetailsDescription {
+    font-size: 0.5em;
+    margin-bottom: 1em;
+  }
+
+  .serviceProductDetailsButton {
+    font-size: 0.6em;
+  }
+}
+
 .servicesWeOfferedHeadingContainer {
   display: flex;
   flex-direction: column;
@@ -108,7 +140,7 @@
 }
 
 .servicesWeOfferedHeading {
-  font-size: 2em;
+  font-size: 1.3em;
   text-align: center;
 }
 
@@ -118,7 +150,7 @@
   }
 
   .servicesWeOfferedHeading {
-    font-size: 1.5em;
+    font-size: 1em;
   }
 }
 
@@ -192,8 +224,23 @@
   animation: fadeIn 0.5s ease-out forwards;
 }
 
+@media screen and (max-width: 1200pxpx) {
+  .serviceOfferdItem {
+    width: 45%;
+    margin: 1em 0.5em;
+  }
+
+  .serviceOfferdItemHeading {
+    font-size: 1.3em;
+  }
+
+  .serviceOfferdItemDescription {
+    font-size: 0.9em;
+  }
+}
+
 /* Media query for medium screens (tablets, small laptops) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .serviceOfferdItem {
     width: 45%;
     margin: 1em 0.5em;
