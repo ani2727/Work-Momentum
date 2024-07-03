@@ -27,7 +27,7 @@
 
 .servicesHeaderContainerDescription {
   font-size: 1.5em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   color: rgb(68, 67, 67);
   font-weight: 600;
 }
@@ -66,15 +66,24 @@
 }
 
 @media screen and (max-width: 468px) {
-  /* .servicesHeaderContainer {
-    background-image: none;
-  } */
+  .servicesHeaderContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1em;
+    margin-top: 6em;
+    text-align: left;
+    height: 100%;
+  }
   .servicesHeaderContainerHeading {
-    font-size: 0.8em;
+    font-size: 1em;
   }
   .servicesHeaderContainerDescription {
     font-size: 0.5em;
     margin-right: 2em;
+  }
+  .connectButton {
+    padding: 0.4em 0.4em;
   }
 }
 
