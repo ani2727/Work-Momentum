@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate, Link } from "react-router-dom";
-import "./Navbar.css";
 import { RiTeamFill } from "react-icons/ri";
 import { SiEsotericsoftware } from "react-icons/si";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "./Navbar.css";
 
 const servicesData = {
   engagementModels: [
@@ -50,21 +51,25 @@ const servicesData = {
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [careersDropdownOpen, setCareersDropdownOpen] = useState(false);
 
   const navigate = useNavigate();
 
   const handleNavigation = (link) => {
     setIsHovered(null);
+    setMenuOpen(false);
     navigate(link);
   };
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="navbarContainer">
         <Link
           className="logo-name-link"
-          onMouseEnter={() => setIsHovered("landing")}
           to="/"
+          onMouseEnter={() => setIsHovered("landing")}
         >
           <div className="logo-name">
             <img
@@ -74,108 +79,139 @@ const Navbar = () => {
             />
           </div>
         </Link>
-        <ul className="navItems">
+        <div className="menuIcon" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+        <ul className={`navItems ${menuOpen ? "open" : ""}`}>
           <li onMouseEnter={() => setIsHovered("Home")}>
-            <NavLink className="navItem" activeClassName="active" exact to="/">
+            <NavLink
+              className="navItem"
+              activeClassName="active"
+              exact
+              to="/"
+              onClick={() => setMenuOpen(false)}
+            >
               Home
             </NavLink>
           </li>
           <li
-            onMouseEnter={() => setIsHovered("Services")}
-            className="navItem"
-            activeClassName="active"
+  onMouseEnter={() => setIsHovered("Services")}
+  className="navItem services-Container"
+  activeClassName="active"
+>
+  Services
+  {isHovered === "Services" ? (
+    <IoIosArrowUp className="services-up-icon" />
+  ) : (
+    <IoIosArrowDown className="down-icon" />
+  )}
+  {isHovered === "Services" && (
+    <div
+      className="popupContainer"
+      onMouseLeave={() => setIsHovered(null)}
+    >
+      <div className="popup">
+        <div className="firstContainer">
+          <div className="headerSection">
+            <SiEsotericsoftware className="firstContainerLogo" />
+            <NavLink
+              exact
+              to="/services"
+              onClick={() => setIsHovered(null)}
+              className="services-link"
+            >
+              Software Development Services
+            </NavLink>
+          </div>
+          <div className="contentSection">
+            <p>
+              Boost your tech projects with outsourced development.
+            </p>
+            <p>
+              Custom engagement models designed to fit your needs.
+            </p>
+          </div>
+        </div>
+
+        <div className="popupRow">
+          <div className="popupSection">
+            <h3 className="popupSectionHeading">
+              Engagement models
+            </h3>
+            <ul>
+              {servicesData.engagementModels.map((item, index) => (
+                <li key={index}>
+                  <div className="flexRow">
+                    <RiTeamFill className="popupItemsLogo" />
+                    <div className="flexCol">
+                      <h4 className="popupItemsHeading">
+                        {item.name}
+                      </h4>
+                      <p className="popupItemsPara">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="popupSection">
+            <h3>Technologies</h3>
+            <ul>
+              {servicesData.technologies.map((tech, index) => (
+                <li key={index} className="technologies-content">
+                  {tech.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="popupSection">
+            <h3>Solutions</h3>
+            <ul>
+              {servicesData.solutions.map((solution, index) => (
+                <li
+                  key={index}
+                  onClick={() => handleNavigation(solution.link)}
+                  className="solutions-content"
+                >
+                  {solution.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+</li>
+          <li
+            onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+            className="navItem mobile-dropdown services-dropdown"
           >
             Services
-            {isHovered === "Services" ? (
-              <IoIosArrowUp className="services-up-icon" />
-            ) : (
-              <IoIosArrowDown className="down-icon" />
-            )}
-            {isHovered === "Services" && (
-              <div
-                className="popupContainer"
-                onMouseLeave={() => setIsHovered(null)}
-              >
-                <div className="popup">
-                  <div className="firstContainer">
-                    <div className="headerSection">
-                      <SiEsotericsoftware className="firstContainerLogo" />
-                      <NavLink
-                        exact
-                        to="/services"
-                        onClick={() => setIsHovered(null)}
-                        className="services-link"
-                      >
-                        Software Development Services
-                      </NavLink>
-                    </div>
-                    <div className="contentSection">
-                      <p>
-                        Boost your tech projects with outsourced development.
-                      </p>
-                      <p>
-                        Custom engagement models designed to fit your needs.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="popupRow">
-                    <div className="popupSection">
-                      <h3 className="popupSectionHeading">
-                        Engagement models.
-                      </h3>
-                      <ul>
-                        {servicesData.engagementModels.map((item, index) => (
-                          <li
-                            key={index}
-                            // onClick={() => handleNavigation(item.link)}
-                          >
-                            <div className="flexRow">
-                              <RiTeamFill className="popupItemsLogo" />
-                              <div className="flexCol">
-                                <h4 className="popupItemsHeading">
-                                  {item.name}
-                                </h4>
-                                <p className="popupItemsPara">
-                                  {item.description}
-                                </p>
-                              </div>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="popupSection">
-                      <h3>Technologies.</h3>
-                      <ul>
-                        {servicesData.technologies.map((tech, index) => (
-                          <li
-                            key={index}
-                            // onClick={() => handleNavigation(tech.link)}
-                            className="technologies-content"
-                          >
-                            {tech.name}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="popupSection">
-                      <h3>Solutions.</h3>
-                      <ul>
-                        {servicesData.solutions.map((solution, index) => (
-                          <li
-                            key={index}
-                            onClick={() => handleNavigation(solution.link)}
-                            className="solutions-content"
-                          >
-                            {solution.name}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            {servicesDropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            {servicesDropdownOpen && (
+              <ul className="dropdown-menu">
+                <li>
+                  <NavLink
+                    exact
+                    to="/services"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Software Development Services
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    exact
+                    to="/services/solutions"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Solutions
+                  </NavLink>
+                </li>
+              </ul>
             )}
           </li>
           <li onMouseEnter={() => setIsHovered("Products")}>
@@ -184,24 +220,21 @@ const Navbar = () => {
               activeClassName="active"
               exact
               to="/products"
+              onClick={() => setMenuOpen(false)}
             >
               Products
             </NavLink>
           </li>
-          <li onMouseEnter={() => setIsHovered("Careers")}>
-            <NavLink
-              className="navItem"
-              activeClassName="active"
-              exact
-              to="/careers"
-            >
-              Careers
-              {isHovered === "Careers" ? (
-                <IoIosArrowUp className="services-up-icon" />
-              ) : (
-                <IoIosArrowDown className="down-icon" />
-              )}
-            </NavLink>
+          <li
+            onMouseEnter={() => setIsHovered("Careers")}
+            className="navItem careers-container"
+          >
+            Careers
+            {isHovered === "Careers" ? (
+              <IoIosArrowUp className="services-up-icon" />
+            ) : (
+              <IoIosArrowDown className="down-icon" />
+            )}
             {isHovered === "Careers" && (
               <div
                 className="careers-hover-card-container"
@@ -228,29 +261,49 @@ const Navbar = () => {
               </div>
             )}
           </li>
-          <li onMouseEnter={() => setIsHovered(false)}>
-            <NavLink
-              className="navItem"
-              activeClassName="active"
-              exact
-              to="/about"
-            >
-              About Us
-            </NavLink>
+          <li
+            onClick={() => setCareersDropdownOpen(!careersDropdownOpen)}
+            className="navItem mobile-dropdown careers-dropdown"
+          >
+            Careers
+            {careersDropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            {careersDropdownOpen && (
+              <ul className="dropdown-menu">
+                <li>
+                  <NavLink
+                    exact
+                    to="/careers"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Careers
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    exact
+                    to="/job-opportunities"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    Job Opportunities
+                  </NavLink>
+                </li>
+              </ul>
+            )}
           </li>
-          <li onMouseEnter={() => setIsHovered(false)}>
+          <li onMouseEnter={() => setIsHovered("Contact")}>
             <NavLink
               className="navItem connect"
               activeClassName="active"
               exact
-              to="/contact-us"
+              to="/contact"
+              onClick={() => setMenuOpen(false)}
             >
               Let's Connect
             </NavLink>
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
