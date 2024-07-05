@@ -8,7 +8,7 @@ const HomeHeader = ()=>{
             <p>Transforming your ideas into cutting-edge digital solutions. Together, we drive progress and shape the future of technology.</p>
             <div>
                 <Link to='/contact-us'><button>Let's Connect</button></Link>
-                </div>
+            </div>
             </div>
                 
         </div>

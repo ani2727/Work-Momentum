@@ -218,13 +218,28 @@
   .home-body-text {
     padding: 1em;
   }
-  
+
+
   .home-body-text h1 {
     font-size: 3.5em;
   }
   
   .home-body-text p {
     font-size: 1.2em;
+  }
+  .home-body-text button{
+    width: 8em;
+    height: 2.5em;
+    margin-top: 2em;
+    background: rgb(60, 60, 224);
+    color: #ffff;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1em;
   }
   
   .home-products-header {
@@ -238,5 +253,10 @@
   
   .servicesContainer {
     margin: 0em 2em;
+  }
+  .servicesDescription {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin: 2em 0em;
   }
 }
