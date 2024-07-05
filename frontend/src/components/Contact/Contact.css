@@ -1,21 +1,29 @@
+/* General styles */
+
 .contact {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url('../../../public/contactus.svg') no-repeat center center/cover; /* Set the background image */
+  background-color: #f0f0f0;
   padding: 20px;
+  overflow-x: hidden;
+}
+
+.contact img {
+  max-width: 100%;
+  height: auto;
 }
 
 .contact-data {
   width: 100%;
-  max-width: 400px; /* Adjust width as needed */
+  max-width: 400px;
   padding: 20px;
-  border: 1px solid #969595;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background for better readability */
-  height: auto;
+  background-color: #fff;
   margin-top: 3em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-data h1 {
@@ -36,20 +44,23 @@
 }
 
 .Email input[type='text'],
-.Email input[type='email'],
-.Email textarea {
-  width: 100%; /* Adjust input width */
+.Email input[type='email'] {
+  width: 100%;
   padding: 8px;
   font-size: 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box; /* Ensures padding is included in width */
-  background: transparent;
+  box-sizing: border-box;
 }
 
-.Email input:focus,
-.Email textarea:focus {
-  outline: none;
+.Email textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
 
 .contact-data button {
@@ -69,7 +80,7 @@
   background-color: #0056b3;
 }
 
-/* Popup CSS */
+/* Popup styles */
 
 .contact-popup-container {
   width: 100%;
@@ -78,133 +89,101 @@
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 1000;
-}
-
-.contact-popup-btn {
-  padding: 1em 2em;
-  background: #ffff;
-  border: 0;
-  outline: none;
-  cursor: pointer;
-  font-size: 1em;
-  font-weight: 5em;
-  border-radius: 5%;
-  color: black;
 }
 
 .contact-popup {
   width: 90%;
   max-width: 400px;
-  background: #fff;
-  border-radius: 5%;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
   text-align: center;
-  padding: 0 30px 30px;
-  visibility: hidden;
-  opacity: 0;
-  transition: transform 0.4s ease-in-out, top 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-popup img {
   width: 100px;
-  margin-top: -50px;
+  height: 100px;
   border-radius: 50%;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
 .contact-popup h2 {
   font-size: 1.5em;
-  font-weight: 500;
-  margin: 30px 0px 10px;
+  margin-bottom: 10px;
 }
 
-.contact-popup button {
-  width: 100%;
-  margin-top: 50px;
-  padding: 10px 0px;
+.contact-popup p {
+  margin-bottom: 20px;
+}
+
+.contact-popup-btn {
+  padding: 10px 20px;
   background-color: #007bff;
-  color: #fff;
-  outline: none;
-  border-radius: 3%;
-  font-size: 1em;
+  color: white;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
-  box-shadow: 0px 5px 5px rgb(0, 0, 0, .2);
+  font-size: 16px;
 }
 
-.contact-popup.open-popup {
-  visibility: visible;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
-  z-index: 3000;
+.contact-popup-btn:hover {
+  background-color: #0056b3;
 }
 
-.contact-popup.close-popup {
-  animation: popupOut 0.3s forwards;
-}
-
-@keyframes popupOut {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0.1);
-    top: 0;
-    opacity: 0;
-  }
-}
-
-/* Media Queries */
+/* Responsive adjustments */
 
 @media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+  }
+
+  .contact-data {
+    margin-top: 2em;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-data {
+    padding: 15px;
+  }
+
   .contact-data h1 {
     font-size: 1.8em;
   }
 
   .Email label {
-    font-size: 1.2em;
+    font-size: 0.9em;
   }
 
   .Email input[type='text'],
   .Email input[type='email'],
   .Email textarea {
-    font-size: 18px;
-  }
-
-  .contact-data button {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contact-data h1 {
-    font-size: 1.5em;
-  }
-
-  .Email label {
-    font-size: 1em;
-  }
-
-  .Email input[type='text'],
-  .Email input[type='email'],
-  .Email textarea {
-    font-size: 16px;
-  }
-
-  .contact-data button {
     font-size: 14px;
+  }
+
+  .contact-data button {
+    font-size: 16px;
   }
 
   .contact-popup img {
     width: 80px;
+    height: 80px;
   }
 
   .contact-popup h2 {
-    font-size: 1.2em;
+    font-size: 1.3em;
+  }
+
+  .contact-popup p {
+    font-size: 0.9em;
+  }
+
+  .contact-popup-btn {
+    font-size: 14px;
   }
 }
