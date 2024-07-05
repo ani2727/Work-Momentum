@@ -69,7 +69,7 @@
   background-color: #0056b3;
 }
 
-/* popup css */
+/* Popup CSS */
 
 .contact-popup-container {
   width: 100%;
@@ -160,6 +160,7 @@
 }
 
 /* Media Queries */
+
 @media (max-width: 768px) {
   .contact-data h1 {
     font-size: 1.8em;
