@@ -12,6 +12,7 @@
   flex-direction: column;
   text-align: left;
   padding: 2em;
+  overflow-x: hidden;
 }
 
 .products {
@@ -44,6 +45,9 @@
   border-radius: 1em;
   padding: 0em 1em;
 }
+.products-offer-card-header h2{
+  font-size: 800px;
+}
 
 .products-description {
   margin-top: 2em;
@@ -55,37 +59,39 @@
 
 .products-offer {
   display: flex;
-  justify-content: space-around;
   padding: 20px;
   background-color: #f9f9f9;
-  flex-wrap: wrap;
+}
+
+.products-offer-header h1{
+  font-size: 2.5em;
+  margin-top: -1em;
 }
 
 .products-offer-card {
   margin: 0.5em;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  width: 18em;
-  box-shadow: 0.1em -0.01em 0.1em 0.2em rgb(204, 200, 200);
+  /* box-shadow: 1em -0.1em 0.1em 0.5em rgb(204, 200, 200); */
   border-radius: 0.5em;
   color: rgb(15, 15, 92);
   transition: 0.3s;
   outline: none;
-  border: none;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
   padding: 20px;
-  background: blue;
+}
+
+.products-offer-card p{
+  font-size: 20px;
 }
 
 .products-offer-card h2 {
   margin-bottom: 10px;
-  font-size: 2em;
 }
 
 .products-offer-card p {
@@ -335,3 +341,139 @@
 .devops-desc-text h1 {
   color: black;
 }
+
+
+
+/* Responsive Media Queries */
+
+/* For screens smaller than 768px (tablets and smaller devices) */
+@media (max-width: 767px) {
+  .products-banner-image {
+    height: 15em;
+    padding: 1em;
+    background-image: none;
+    background: black;
+  }
+
+  .products-header h1{
+    font-size: 1.8em;
+  }
+
+
+  .products-description {
+    font-size: 0.8em;
+    padding: 0;
+    width: 100%;
+  }
+
+  .products-offer {
+    display: flex;
+    flex-direction: column;
+  }
+  .products-offer-card {
+    margin: 0.5em 0;
+    padding: 10px;
+    background: blue;
+  }
+
+  .tech-stack h1 {
+    font-size: 2em;
+  }
+
+  .why-devops {
+    margin: 2em 1em 4em;
+    padding: 1em;
+  }
+
+  .why-devops-card {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+  .why-devops h1 {
+    font-size: 2.5em;
+  }
+
+  .why-devops-header img {
+    width: 60px;
+  }
+}
+
+/* For screens between 768px and 1024px (tablets and medium-sized devices) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .products-banner-image {
+    height: 25em;
+  }
+
+  .products-description {
+    width: 60%;
+  }
+
+  .products-offer-card {
+    width: 45%;
+    margin: 0.5em;
+    padding: 15px;
+  }
+
+  .tech-stack h1 {
+    font-size: 2.2em;
+  }
+
+  .why-devops {
+    margin: 2em 2em 5em;
+  }
+
+  .why-devops-card {
+    width: 45%;
+    margin: 1em;
+  }
+
+  .why-devops h1 {
+    font-size: 2.7em;
+  }
+
+  .why-devops-header img {
+    width: 70px;
+  }
+}
+
+/* For screens larger than 1024px (large desktops) */
+@media (min-width: 1025px) {
+  .products-banner-image {
+    height: 30em;
+  }
+
+  .products-description {
+    width: 45%;
+  }
+
+  .products-offer-card {
+    width: 30%;
+    margin: 0.5em;
+    padding: 20px;
+  }
+
+  .tech-stack h1 {
+    font-size: 2.4em;
+  }
+
+  .why-devops {
+    margin: 3em 5em 6em;
+  }
+
+  .why-devops-card {
+    width: calc(50% - 2em);
+    margin: 1em;
+  }
+
+  .why-devops h1 {
+    font-size: 2.8em;
+  }
+
+  .why-devops-header img {
+    width: 80px;
+  }
+}
+
+
+

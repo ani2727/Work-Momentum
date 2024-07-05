@@ -15,14 +15,14 @@ const Products = ()=>{
                 </div>
             </div>
             <div>
-                <div className='products-offer-header'><h1 style={{fontSize:'2.5em',marginTop:'-1em'}}>What We Offer</h1></div>
+                <div className='products-offer-header'><h1>What We Offer</h1></div>
                 <div className='products-offer'>
                         <div className='products-offer-card'>
                             <div className="products-offer-card-header">
                                 <h2>Comprehensive DevOps Ecosystem</h2>
                                 <img src='https://i.postimg.cc/5yxy9v6N/image.png' alt=''></img>
                             </div>
-                            <p style={{fontSize:'20px'}}>We integrate a robust set of DevOps tools and cloud providers, 
+                            <p >We integrate a robust set of DevOps tools and cloud providers, 
                             ensuring you have everything you need at your fingertips.</p>
                         </div>
                         <div className='products-offer-card'>
@@ -30,14 +30,14 @@ const Products = ()=>{
                                 <h2>Seamless CI/CD Flows</h2>
                                 <img src='https://cdn0.iconfinder.com/data/icons/agile-basic-2-filled-outline/468/Layer45-64.png' alt=''></img>
                             </div>
-                            <p style={{fontSize:'20px'}}> Develop and manage continuous integration and continuous deployment pipelines effortlessly.</p>
+                            <p > Develop and manage continuous integration and continuous deployment pipelines effortlessly.</p>
                         </div>
                         <div className='products-offer-card'>
                             <div className="products-offer-card-header">
                             <h2>Rapid Deployment</h2>
                             <img src="https://i.postimg.cc/mDNMSCq7/image.png" alt="" ></img>
                             </div>
-                            <p style={{fontSize:'20px'}}>With just one click, deploy your applications swiftly and reliably.</p>
+                            <p >With just one click, deploy your applications swiftly and reliably.</p>
                         </div>
                 </div>
             </div>

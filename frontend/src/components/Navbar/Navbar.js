@@ -303,7 +303,7 @@ const Navbar = () => {
               className="navItem connect"
               activeClassName="active"
               exact
-              to="/contact"
+              to="/contact-us"
               onClick={() => setMenuOpen(false)}
             >
               Let's Connect
