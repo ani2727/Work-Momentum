@@ -221,7 +221,7 @@
 
 
   .home-body-text h1 {
-    font-size: 3.5em;
+    font-size: 2.5em;
   }
   
   .home-body-text p {
@@ -230,7 +230,7 @@
   .home-body-text button{
     width: 8em;
     height: 2.5em;
-    margin-top: 2em;
+    margin-top: 1em;
     background: rgb(60, 60, 224);
     color: #ffff;
     font-weight: bold;
