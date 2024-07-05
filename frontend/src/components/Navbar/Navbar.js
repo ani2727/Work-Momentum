@@ -3,6 +3,7 @@ import { NavLink, useNavigate, Link } from "react-router-dom";
 import { RiTeamFill } from "react-icons/ri";
 import { SiEsotericsoftware } from "react-icons/si";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import { FaChevronRight } from "react-icons/fa";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Navbar.css";
 
@@ -202,7 +203,7 @@ const Navbar = () => {
                     onClick={() => setMenuOpen(false)}
                     className="dropdown-item"
                   >
-                    Software Development Services
+                    Software Development Services <FaChevronRight style={{fontSize:"0.7em"}}/>
                   </NavLink>
                 </li>
                 <li>
@@ -212,7 +213,7 @@ const Navbar = () => {
                     onClick={() => setMenuOpen(false)}
                     className="dropdown-item"
                   >
-                    Solutions
+                    Solutions <FaChevronRight style={{fontSize:"0.7em"}}/>
                   </NavLink>
                 </li>
               </ul>
@@ -282,7 +283,7 @@ const Navbar = () => {
                     onClick={() => setMenuOpen(false)}
                     className="dropdown-item"
                   >
-                    Careers
+                    Careers <FaChevronRight style={{fontSize:"0.7em"}}/>
                   </NavLink>
                 </li>
                 <li>
@@ -293,10 +294,22 @@ const Navbar = () => {
                     className="dropdown-item"
                   >
                     Job Opportunities
+                    <FaChevronRight style={{fontSize:"0.7em"}}/>
                   </NavLink>
                 </li>
               </ul>
             )}
+          </li>
+          <li onMouseEnter={() => setIsHovered("AboutUs")}>
+            <NavLink
+              className="navItem"
+              activeClassName="active"
+              exact
+              to="/about"
+              onClick={() => setMenuOpen(false)}
+            >
+              About Us
+            </NavLink>
           </li>
           <li onMouseEnter={() => setIsHovered("Contact")}>
             <NavLink

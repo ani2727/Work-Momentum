@@ -346,7 +346,7 @@
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .menuIcon {
     display: block;
   }
@@ -441,7 +441,7 @@
 }
 
 /* Hide dropdown buttons in desktop mode */
-@media (min-width: 769px) {
+@media (min-width: 1001px) {
   .mobile-dropdown {
     display: none;
   }
