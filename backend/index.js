@@ -28,8 +28,8 @@ mongoose.connect(dbUrl)
 
 app.post("/user/register", async (req, res) => {
   try {
-      const {userName,email} = req.body;
-      const user = await UserModel.create({userName,email});
+      const {userName,email,mobile,message} = req.body;
+      const user = await UserModel.create({userName,email,mobile,message});
       res.send("Success")
   } catch (err) {
     console.error(err);

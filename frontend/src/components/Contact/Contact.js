@@ -95,6 +95,8 @@ const Contact = () => {
 
   const [name,setName] = useState('');
   const [mail,setMail] = useState('');
+  const [message,setMessage] = useState('');
+  const [mobile,setMobile] = useState('');
 
   const defaultImageUrl = 'https://res.cloudinary.com/dkdslxqqx/image/upload/v1717658764/iwlasfaj6duzq9qw55hy.webp';
 
@@ -105,6 +107,8 @@ const Contact = () => {
 
   const Name = useRef();
   const Email = useRef();
+  const Message = useRef();
+  const Mobile = useRef();
 
   const openPopup = (head,message, imageUrl = defaultImageUrl) => {
     setPopupMessage(message);
@@ -119,6 +123,8 @@ const Contact = () => {
     setMail(''); 
     Name.current.value = '';
     Email.current.value = '';
+    Mobile.current.value = '';
+    Message.current.value = '';
 }
 
  
@@ -126,7 +132,7 @@ const Contact = () => {
     event.preventDefault();
 
     try {
-          await axios.post("https://work-momentum.onrender.com/user/register", {userName: name,email: mail});
+          await axios.post("https://work-momentum.onrender.com/user/register", {userName: name,email: mail,mobile,message});
           openPopup('Thank You','Your details have been successfully submitted. Thanks', 'https://res.cloudinary.com/dkdslxqqx/image/upload/v1718458077/404-tick_e51zjo.png');
 
     } 
@@ -175,11 +181,11 @@ const Contact = () => {
                   </div>
                   <div className='Email'>
                     <label>Mobile Number</label>
-                    <input placeholder='Your Mobile No' type='text' required />
+                    <input placeholder='Your Mobile No' value={mobile} onChange={(e)=>setMobile(e.target.value)} ref={Mobile} type='text' required />
                   </div>
                   <div className='Email'>
                     <label>Description</label>
-                    <textarea placeholder='Write a Message' type='text' required />
+                    <textarea placeholder='Write a Message' value={message} onChange={(e)=>setMessage(e.target.value)} ref={Message} type='text' required />
                   </div>
                   <button type="submit">Submit</button> {/* Use type="submit" to trigger form submission */}
                 </form>

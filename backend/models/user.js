@@ -10,6 +10,14 @@ const UserSchema = new mongoose.Schema(
         email:{
             type:String,
             required:true,
+        },
+        mobile:{
+            type:String,
+            required:true,
+        },
+        message:{
+            type:String,
+            required:true,
         }
     }
 )
