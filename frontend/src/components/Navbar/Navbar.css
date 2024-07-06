@@ -1,3 +1,4 @@
+/* General Navbar Styles */
 .navbar {
   position: fixed;
   width: 100%;
@@ -15,9 +16,16 @@
 
 .logo {
   align-self: center;
-  width: 120px;
+  width: 100px;
   cursor: pointer;
 }
+
+.menuIcon {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 .navItems {
   list-style: none;
   display: flex;
@@ -37,6 +45,7 @@
   transition: all 0.5s ease;
   box-sizing: border-box;
   font-size: 1.1em;
+  position: relative;
 }
 
 .navItem:hover {
@@ -54,6 +63,37 @@
   border: none;
 }
 
+/* Dropdown Styles */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.navItem:hover .dropdown {
+  display: flex;
+}
+
+.dropdownItem {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.dropdownItem:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Popup Styles */
 .popupContainer {
   position: absolute;
   top: 100%;
@@ -62,10 +102,14 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
   z-index: 1000;
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 2em;
   animation: fadeIn 0.3s ease-in-out;
+}
+
+.navItem:hover .popupContainer {
+  display: flex;
 }
 
 .popup {
@@ -87,6 +131,12 @@
 .firstContainerLogo {
   font-size: 2rem;
   margin-right: 10px;
+}
+
+.services-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .services-link {
@@ -114,7 +164,6 @@
 
 .popupRow {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -162,10 +211,6 @@
   font-size: 1em;
 }
 
-/* .popupItemsHeading:hover {
-  text-decoration: underline;
-} */
-
 .popupItemsPara {
   color: rgb(113, 112, 112);
   font-size: 0.8em;
@@ -178,10 +223,6 @@
   text-align: left;
   font-weight: 400;
 }
-
-/* .technologies-content:hover {
-  text-decoration: underline;
-} */
 
 .solutions-content {
   font-size: 0.9em;
@@ -199,6 +240,9 @@
   justify-content: center;
   border-radius: 0.3em;
   color: #fff;
+  display: inline-block;
+  width: auto;
+  font-size: inherit;
 }
 
 .connect:hover {
@@ -208,7 +252,7 @@
 }
 
 .down-icon {
-  margin: auto 10px;
+  margin: 2px 3px -1px 3px;
 }
 
 .up-icon {
@@ -217,11 +261,18 @@
 }
 
 .services-up-icon {
-  margin: auto 10px;
+  margin: 1px 3px 1px 3px;
+}
+
+.careers-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .careers-nav-item:hover .down-icon {
   display: none;
+  margin: 1px 3px -1px 3px;
 }
 
 .careers-nav-item:hover .up-icon {
@@ -241,29 +292,39 @@
   border: 1px solid #ddd;
   z-index: 1000;
   animation: fadeIn 0.3s ease-in-out;
+  display: none;
+}
+
+.navItem:hover .careers-hover-card-container {
+  display: flex;
 }
 
 .careers-hover-card {
   display: flex;
   width: max-content;
 }
+
 .careers-hover-card .left-part {
   padding: 20px;
   border-right: 1px solid black;
 }
+
 .careers-hover-card a {
   text-decoration: none;
   color: #000;
 }
+
 .careers-hover-card .left-part h2 {
   font-size: 1.5rem;
   color: #000;
 }
+
 .careers-hover-card .left-part h2 span {
   margin-left: 2px;
   font-size: 1.5rem;
   color: rgb(47, 47, 243);
 }
+
 .careers-hover-card .left-part p {
   padding-top: 0.5rem;
   font-size: 0.75rem;
@@ -281,5 +342,124 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1000px) {
+  .menuIcon {
+    display: block;
+  }
+
+  .logo {
+    width: 80px;
+  }
+
+  .navItems {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .navItem:hover {
+    border: none;
+  }
+
+  .navItems.open {
+    display: flex;
+  }
+
+  .navItem {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+
+  .dropdown {
+    position: static;
+    width: 100%;
+    display: none;
+  }
+
+  .popupContainer,
+  .careers-hover-card-container {
+    display: none;
+  }
+
+  .mobile-dropdown {
+    display: block;
+    cursor: pointer;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .mobile-dropdown ul {
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .services-dropdown,
+  .careers-dropdown {
+    background-color: white;
+    border-radius: 0;
+  }
+
+  .services-dropdown.open,
+  .careers-dropdown.open {
+    background-color: #f5f5f5;
+  }
+  .mobile-dropdown ul li {
+    display: inline-block;
+    margin: 0.2rem;
+  }
+
+  .dropdown-item {
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .mobile-dropdown:hover .dropdown {
+    display: flex;
+  }
+  
+
+  .services-Container,
+  .careers-container {
+    display: none; /* Ensure services and careers sections are hidden on mobile */
+  }
+}
+
+/* Hide dropdown buttons in desktop mode */
+@media (min-width: 1001px) {
+  .mobile-dropdown {
+    display: none;
+  }
+
+  .popupContainer,
+  .dropdown,
+  .careers-hover-card-container {
+    display: none;
+  }
+
+  .navItem:hover .popupContainer,
+  .navItem:hover .dropdown,
+  .navItem:hover .careers-hover-card-container {
+    display: flex;
+  }
+
+  .services-container,
+  .careers-container {
+    display: flex;
   }
 }

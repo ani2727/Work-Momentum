@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate, Link } from "react-router-dom";
-import "./Navbar.css";
 import { RiTeamFill } from "react-icons/ri";
 import { SiEsotericsoftware } from "react-icons/si";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
+import { FaChevronRight } from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "./Navbar.css";
 
 const servicesData = {
   engagementModels: [
@@ -50,21 +52,25 @@ const servicesData = {
 
 const Navbar = () => {
   const [isHovered, setIsHovered] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
+  const [careersDropdownOpen, setCareersDropdownOpen] = useState(false);
 
   const navigate = useNavigate();
 
   const handleNavigation = (link) => {
     setIsHovered(null);
+    setMenuOpen(false);
     navigate(link);
   };
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       <div className="navbarContainer">
         <Link
           className="logo-name-link"
-          onMouseEnter={() => setIsHovered("landing")}
           to="/"
+          onMouseEnter={() => setIsHovered("landing")}
         >
           <div className="logo-name">
             <img
@@ -74,15 +80,24 @@ const Navbar = () => {
             />
           </div>
         </Link>
-        <ul className="navItems">
+        <div className="menuIcon" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+        <ul className={`navItems ${menuOpen ? "open" : ""}`}>
           <li onMouseEnter={() => setIsHovered("Home")}>
-            <NavLink className="navItem" activeClassName="active" exact to="/">
+            <NavLink
+              className="navItem"
+              activeClassName="active"
+              exact
+              to="/"
+              onClick={() => setMenuOpen(false)}
+            >
               Home
             </NavLink>
           </li>
           <li
             onMouseEnter={() => setIsHovered("Services")}
-            className="navItem"
+            className="navItem services-Container"
             activeClassName="active"
           >
             Services
@@ -122,14 +137,11 @@ const Navbar = () => {
                   <div className="popupRow">
                     <div className="popupSection">
                       <h3 className="popupSectionHeading">
-                        Engagement models.
+                        Engagement models
                       </h3>
                       <ul>
                         {servicesData.engagementModels.map((item, index) => (
-                          <li
-                            key={index}
-                            // onClick={() => handleNavigation(item.link)}
-                          >
+                          <li key={index}>
                             <div className="flexRow">
                               <RiTeamFill className="popupItemsLogo" />
                               <div className="flexCol">
@@ -146,21 +158,17 @@ const Navbar = () => {
                       </ul>
                     </div>
                     <div className="popupSection">
-                      <h3>Technologies.</h3>
+                      <h3>Technologies</h3>
                       <ul>
                         {servicesData.technologies.map((tech, index) => (
-                          <li
-                            key={index}
-                            // onClick={() => handleNavigation(tech.link)}
-                            className="technologies-content"
-                          >
+                          <li key={index} className="technologies-content">
                             {tech.name}
                           </li>
                         ))}
                       </ul>
                     </div>
                     <div className="popupSection">
-                      <h3>Solutions.</h3>
+                      <h3>Solutions</h3>
                       <ul>
                         {servicesData.solutions.map((solution, index) => (
                           <li
@@ -178,30 +186,60 @@ const Navbar = () => {
               </div>
             )}
           </li>
+          <li
+            onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
+            className={`navItem mobile-dropdown services-dropdown ${
+              servicesDropdownOpen ? "open" : ""
+            }`}
+          >
+            Services
+            {servicesDropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            {servicesDropdownOpen && (
+              <ul className="dropdown-menu">
+                <li>
+                  <NavLink
+                    exact
+                    to="/services"
+                    onClick={() => setMenuOpen(false)}
+                    className="dropdown-item"
+                  >
+                    Software Development Services <FaChevronRight style={{fontSize:"0.7em"}}/>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    exact
+                    to="/services"
+                    onClick={() => setMenuOpen(false)}
+                    className="dropdown-item"
+                  >
+                    Solutions <FaChevronRight style={{fontSize:"0.7em"}}/>
+                  </NavLink>
+                </li>
+              </ul>
+            )}
+          </li>
           <li onMouseEnter={() => setIsHovered("Products")}>
             <NavLink
               className="navItem"
               activeClassName="active"
               exact
               to="/products"
+              onClick={() => setMenuOpen(false)}
             >
               Products
             </NavLink>
           </li>
-          <li onMouseEnter={() => setIsHovered("Careers")}>
-            <NavLink
-              className="navItem"
-              activeClassName="active"
-              exact
-              to="/careers"
-            >
-              Careers
-              {isHovered === "Careers" ? (
-                <IoIosArrowUp className="services-up-icon" />
-              ) : (
-                <IoIosArrowDown className="down-icon" />
-              )}
-            </NavLink>
+          <li
+            onMouseEnter={() => setIsHovered("Careers")}
+            className="navItem careers-container"
+          >
+            Careers
+            {isHovered === "Careers" ? (
+              <IoIosArrowUp className="services-up-icon" />
+            ) : (
+              <IoIosArrowDown className="down-icon" />
+            )}
             {isHovered === "Careers" && (
               <div
                 className="careers-hover-card-container"
@@ -228,29 +266,65 @@ const Navbar = () => {
               </div>
             )}
           </li>
-          <li onMouseEnter={() => setIsHovered(false)}>
+          <li
+            onClick={() => setCareersDropdownOpen(!careersDropdownOpen)}
+            className={`navItem mobile-dropdown careers-dropdown ${
+              careersDropdownOpen ? "open" : ""
+            }`}
+          >
+            Careers
+            {careersDropdownOpen ? <IoIosArrowUp /> : <IoIosArrowDown />}
+            {careersDropdownOpen && (
+              <ul className="dropdown-menu">
+                <li>
+                  <NavLink
+                    exact
+                    to="/careers"
+                    onClick={() => setMenuOpen(false)}
+                    className="dropdown-item"
+                  >
+                    Careers <FaChevronRight style={{fontSize:"0.7em"}}/>
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink
+                    exact
+                    to="/job-opportunities"
+                    onClick={() => setMenuOpen(false)}
+                    className="dropdown-item"
+                  >
+                    Job Opportunities
+                    <FaChevronRight style={{fontSize:"0.7em"}}/>
+                  </NavLink>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li onMouseEnter={() => setIsHovered("AboutUs")}>
             <NavLink
               className="navItem"
               activeClassName="active"
               exact
               to="/about"
+              onClick={() => setMenuOpen(false)}
             >
               About Us
             </NavLink>
           </li>
-          <li onMouseEnter={() => setIsHovered(false)}>
+          <li onMouseEnter={() => setIsHovered("Contact")}>
             <NavLink
               className="navItem connect"
               activeClassName="active"
               exact
               to="/contact-us"
+              onClick={() => setMenuOpen(false)}
             >
               Let's Connect
             </NavLink>
           </li>
         </ul>
       </div>
-    </div>
+    </nav>
   );
 };
 
