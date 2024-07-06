@@ -215,17 +215,23 @@
 }
 
 @media (max-width: 480px) {
+  .home-header{
+    margin-top: -0.6em;
+  }
   .home-body-text {
     padding: 1em;
+    margin-top: 2em;
   }
 
 
   .home-body-text h1 {
     font-size: 2.5em;
+    margin-bottom: 0.5em;
   }
   
   .home-body-text p {
     font-size: 1.2em;
+    margin-bottom: 2em;
   }
   .home-body-text button{
     width: 8em;
