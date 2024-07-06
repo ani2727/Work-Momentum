@@ -1,5 +1,4 @@
-/* General Navbar Styles */
-.navbar {
+/* .navbar {
   position: fixed;
   width: 100%;
   z-index: 1;
@@ -63,7 +62,6 @@
   border: none;
 }
 
-/* Dropdown Styles */
 .dropdown {
   position: absolute;
   top: 100%;
@@ -93,7 +91,6 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Popup Styles */
 .popupContainer {
   position: absolute;
   top: 100%;
@@ -280,19 +277,7 @@
 }
 
 .careers-hover-card-container {
-  /* width: max-content;
-  padding: 30px 20px;
-  border-radius: 5px;
-  color: #000;
-  position: absolute;
-  top: 100%;
-  right: 15rem;
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border: 1px solid #ddd;
-  z-index: 1000;
-  animation: fadeIn 0.3s ease-in-out;
-  display: none; */
+  
   position: absolute;
   top: 100%;
   right: 0;
@@ -356,7 +341,6 @@
   }
 }
 
-/* Responsive Styles */
 @media (max-width: 1000px) {
   .menuIcon {
     display: block;
@@ -446,11 +430,10 @@
 
   .services-Container,
   .careers-container {
-    display: none; /* Ensure services and careers sections are hidden on mobile */
+    display: none; 
   }
 }
 
-/* Hide dropdown buttons in desktop mode */
 @media (min-width: 1001px) {
   .mobile-dropdown {
     display: none;
@@ -471,5 +454,371 @@
   .services-container,
   .careers-container {
     display: flex;
+  }
+} */
+
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3.2rem;
+  background-color: #fff;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  align-self: center;
+  width: 120px;
+  cursor: pointer;
+}
+.navItems-desktop {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.navItem {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.5s ease;
+  box-sizing: border-box;
+  font-size: 1.1em;
+}
+
+.navItem:hover {
+  border-bottom: 1px solid rgb(47, 47, 243);
+  border-radius: 0rem;
+}
+
+.navItem.active {
+  background: rgb(47, 47, 243);
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+.navItem.active:hover {
+  border: none;
+}
+
+.popupContainer {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+}
+
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerSection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+.firstContainerLogo {
+  font-size: 2rem;
+  margin-right: 10px;
+}
+
+.services-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+  color: rgb(74, 120, 236);
+}
+
+.contentSection {
+  text-align: left;
+  margin-left: 2.5em;
+  font-weight: 100;
+}
+
+.services-link {
+  text-align: start;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.services-link:hover {
+  text-decoration: underline;
+}
+
+.popupRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.popupSection {
+  margin-right: 4em;
+}
+
+.firstContainer p {
+  margin: 0em 0em;
+}
+
+.popupSection h3 {
+  margin: 1em 0;
+  color: rgb(74, 120, 236);
+  text-align: left;
+}
+
+.popupSection ul {
+  padding: 0;
+}
+
+.popupSection li {
+  list-style-type: none;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+
+.flexRow {
+  display: flex;
+  align-items: center;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.popupItemsLogo {
+  margin-right: 1em;
+}
+
+.popupItemsHeading {
+  color: rgb(45, 45, 45);
+  font-size: 1em;
+}
+
+/* .popupItemsHeading:hover {
+  text-decoration: underline;
+} */
+
+.popupItemsPara {
+  color: rgb(113, 112, 112);
+  font-size: 0.8em;
+  text-align: left;
+  font-weight: 500;
+}
+
+.technologies-content {
+  font-size: 0.9em;
+  text-align: left;
+  font-weight: 400;
+}
+
+/* .technologies-content:hover {
+  text-decoration: underline;
+} */
+
+.solutions-content {
+  font-size: 0.9em;
+  text-align: left;
+  font-weight: 500;
+}
+
+.solutions-content:hover {
+  text-decoration: underline;
+}
+
+.connect {
+  background: rgb(73, 73, 226);
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3em;
+  color: #fff;
+}
+
+.connect:hover {
+  background-color: blue;
+  border-radius: 0.3em;
+  border: none;
+}
+
+.down-icon {
+  margin: auto 10px;
+}
+
+.up-icon {
+  margin: auto 10px;
+  display: none;
+}
+
+.services-up-icon {
+  margin: auto 10px;
+}
+
+.careers-nav-item:hover .down-icon {
+  display: none;
+}
+
+.careers-nav-item:hover .up-icon {
+  display: inline;
+}
+
+.careers-hover-card-container {
+  width: max-content;
+  padding: 30px 20px;
+  border-radius: 5px;
+  color: #000;
+  position: absolute;
+  top: 100%;
+  right: 15rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.careers-hover-card {
+  display: flex;
+  width: max-content;
+}
+.careers-hover-card .left-part {
+  padding: 20px;
+  border-right: 1px solid black;
+}
+.careers-hover-card a {
+  text-decoration: none;
+  color: #000;
+}
+.careers-hover-card .left-part h2 {
+  font-size: 1.5rem;
+  color: #000;
+}
+.careers-hover-card .left-part h2 span {
+  margin-left: 2px;
+  font-size: 1.5rem;
+  color: rgb(47, 47, 243);
+}
+.careers-hover-card .left-part p {
+  padding-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.careers-hover-card .right-part {
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navItems-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .navItems-desktop {
+    display: none;
+  }
+  .navItems-desktop a {
+    text-decoration: none;
+  }
+
+  .navItems-mobile {
+    display: block;
+  }
+  .menuIcon {
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .navItems-container-mobile {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    color: #000;
+    animation: fadeIn 0.3s ease-in-out;
+    padding-bottom: 1rem;
+    background-color: #fff;
+  }
+  .navItems-container-mobile li {
+    width: 100%;
+    margin: 0rem auto;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    font-size: 1.3rem;
+    font-weight: 550;
+  }
+  .navItem-mobile {
+    width: 100%;
+    cursor: pointer;
+    display: block;
+    margin: 0rem auto;
+    padding: 0.5rem 0rem;
+  }
+  .navItems-container-mobile li:hover {
+    background-color: #f5f5f5;
+    color: rgb(74, 120, 236);
+  }
+
+  .navItems-container-mobile li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .active {
+    background-color: #f5f5f5;
+    color: rgb(74, 120, 236);
+  }
+  .services-nav-conatainer-mobile {
+    background-color: #f5f5f5 !important;
+  }
+  .careers-nav-conatainer-mobile {
+    background-color: #f5f5f5 !important;
+  }
+  .mobile-arrow-icon {
+    margin: auto 0.25rem;
   }
 }
