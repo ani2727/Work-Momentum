@@ -176,8 +176,15 @@
 }
 
 @media (max-width: 480px) {
+  .contact h1:nth-child(1){
+    font-size: 1.6em;
+  }
   .contact-data {
     padding: 15px;
+  }
+  .contact-info h2{
+    font-size: 1.5em;
+    padding: 1em 2em;
   }
 
   .contact-data h1 {
