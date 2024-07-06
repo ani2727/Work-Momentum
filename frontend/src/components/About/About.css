@@ -74,7 +74,6 @@
 
 .unique p {
   margin-bottom: 1em;
-  text-align: justify;
   margin: 0em 2em;
   color: #131212;
 }
@@ -126,7 +125,6 @@
 
 .products-offer-card p {
   font-size: 1rem;
-  text-align: justify;
 }
 
 .aboutus-heading {
@@ -209,7 +207,6 @@
 .member-text p {
   margin: 10px 0;
   font-size: 1.1em;
-  text-align: justify;
   color: #666;
   line-height: 1.6em;
 }

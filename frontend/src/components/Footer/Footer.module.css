@@ -152,3 +152,9 @@
 .icon:hover {
   color: #338bff;
 }
+
+@media (max-width: 480px) {
+  .footerContent{
+    padding:1em 2em;
+  }
+}

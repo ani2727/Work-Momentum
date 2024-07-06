@@ -12,12 +12,17 @@
   /* background: linear-gradient(to right, #d4b5c4, #158eb3); */
 }
 .contact h1{
-  padding: 1em;
   /* background-image: linear-gradient(to right, #cc3179, #7fb825); 
   -webkit-background-clip: text; 
   background-clip: text; 
   color: transparent;  */
   font-size:3em;
+}
+.follow-us{
+  padding: 0.5em;
+}
+.follow-us a{
+  padding: 1em;
 }
 
 .contact img {

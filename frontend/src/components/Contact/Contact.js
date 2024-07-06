@@ -89,6 +89,7 @@
 import React, { useRef, useState } from 'react';
 import './Contact.css';
 import axios from 'axios';
+import { FaInstagram, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
 
@@ -149,6 +150,11 @@ const Contact = () => {
             ) :(
               <div className='contact'>
                 <h1>Get in touch with us</h1>
+                <div className='follow-us'>
+                  <a href='https://www.instagram.com/workmomentum?igsh=MTg3dXFtZjMybnp1Zw==' ><FaInstagram size={35}/></a>
+                  <a href='https://wa.me/9705501016'><FaWhatsapp size={35} /></a>
+                  <a href='https://www.linkedin.com/company/workmomentum' ><FaLinkedin size={35}/></a>
+                </div>
               {/* <div><img src="contactus.svg" alt="" /></div> */}
               <div className='contact-info'>
                 <h2>Hyderabad</h2>

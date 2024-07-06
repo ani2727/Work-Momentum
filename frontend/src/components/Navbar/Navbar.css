@@ -97,7 +97,6 @@
 .popupContainer {
   position: absolute;
   top: 100%;
-  right: 0;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #ddd;
@@ -106,6 +105,7 @@
   flex-direction: column;
   padding: 2em;
   animation: fadeIn 0.3s ease-in-out;
+  margin-right: auto;
 }
 
 .navItem:hover .popupContainer {
