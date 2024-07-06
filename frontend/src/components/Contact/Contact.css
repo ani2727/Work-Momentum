@@ -3,16 +3,44 @@
 .contact {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  min-height: 100vh;
   background-color: #f0f0f0;
   padding: 20px;
   overflow-x: hidden;
+  margin: 5em 0em;
+  /* background: linear-gradient(to right, #d4b5c4, #158eb3); */
+}
+.contact h1{
+  padding: 1em;
+  /* background-image: linear-gradient(to right, #cc3179, #7fb825); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;  */
+  font-size:3em;
 }
 
 .contact img {
   max-width: 100%;
   height: auto;
+}
+.contact-info{
+  box-shadow: 1px -1px 1px 4px rgb(245, 244, 244);
+  border-radius: 1em;
+  padding: 2em;
+  background: white;
+}
+.contact-info h2{
+  padding: 1em;
+  font-size: 2.5em;
+  /* background-image: linear-gradient(to right, #cc3179, #7fb825); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;  */
+}
+.contact-info p{
+  padding: 0.2em 1em;
+  font-size: 1.3em;
 }
 
 .contact-data {

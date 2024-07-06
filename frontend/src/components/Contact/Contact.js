@@ -148,17 +148,32 @@ const Contact = () => {
                 </div>
             ) :(
               <div className='contact'>
-              <div><img src="contactus.svg" alt="" /></div>
+                <h1>Get in touch with us</h1>
+              {/* <div><img src="contactus.svg" alt="" /></div> */}
+              <div className='contact-info'>
+                <h2>Hyderabad</h2>
+                <p>Madhapur,Hyd</p>
+                <p>hr@workmomentum.com</p>
+                <p>+91 92814 88820</p>
+              </div>
               <div className='contact-data'>
                 <h1>Contact Us</h1>
                 <form onSubmit={handleSubmit}> {/* Wrap inputs and button in a form element */}
                   <div className='Email'>
                     <label>Name</label>
-                    <input placeholder="Name" value={name} onChange={(e)=>setName(e.target.value)} ref={Name} type='text' required />
+                    <input placeholder="Your Name" value={name} onChange={(e)=>setName(e.target.value)} ref={Name} type='text' required />
                   </div>
                   <div className='Email'>
                     <label>Email</label>
-                    <input placeholder='Email' value={mail} onChange={(e)=>setMail(e.target.value)} ref={Email} type='email' required />
+                    <input placeholder='Your Email' value={mail} onChange={(e)=>setMail(e.target.value)} ref={Email} type='email' required />
+                  </div>
+                  <div className='Email'>
+                    <label>Mobile Number</label>
+                    <input placeholder='Your Mobile No' type='text' required />
+                  </div>
+                  <div className='Email'>
+                    <label>Description</label>
+                    <textarea placeholder='Write a Message' type='text' required />
                   </div>
                   <button type="submit">Submit</button> {/* Use type="submit" to trigger form submission */}
                 </form>
