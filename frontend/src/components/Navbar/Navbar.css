@@ -280,7 +280,7 @@
 }
 
 .careers-hover-card-container {
-  width: max-content;
+  /* width: max-content;
   padding: 30px 20px;
   border-radius: 5px;
   color: #000;
@@ -292,7 +292,18 @@
   border: 1px solid #ddd;
   z-index: 1000;
   animation: fadeIn 0.3s ease-in-out;
+  display: none; */
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  z-index: 1000;
   display: none;
+  flex-direction: column;
+  padding: 2em;
+  animation: fadeIn 0.3s ease-in-out;
 }
 
 .navItem:hover .careers-hover-card-container {
@@ -432,7 +443,6 @@
   .mobile-dropdown:hover .dropdown {
     display: flex;
   }
-  
 
   .services-Container,
   .careers-container {
