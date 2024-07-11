@@ -97,9 +97,9 @@ function Footer() {
         </div>
         <div className={styles.helpCenter}>
           <h3>Help Center</h3>
-          <p><FaPhoneAlt size={20} className={styles.contactIcon} /> +91 9705501016</p>
-          <p><MdEmail size={45} className={styles.contactIcon} /> hr@workmomentum.com</p>
-          <p><MdHome size={25} className={styles.homeIcon} /> Madhapur, Hyderabad.</p>
+          <p><FaPhoneAlt  className={styles.contactIcon} /> +91 9705501016</p>
+          <p><MdEmail className={styles.contactIcon} />hr@workmomentum.com</p>
+          <p><MdHome  className={styles.homeIcon} /> Madhapur, Hyderabad.</p>
         </div>
       </div>
     </div>
